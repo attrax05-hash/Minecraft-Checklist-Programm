@@ -20,16 +20,11 @@ jobs:
         with:
           node-version: '24'
       
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 10.4.1
-      
-      - name: Install dependencies
-        run: pnpm install
+      - name: Install dependencies with npm
+        run: npm ci
       
       - name: Build Electron app
-        run: pnpm run dist
+        run: npm run dist
       
       - name: Upload artifacts to Release
         uses: softprops/action-gh-release@v2
