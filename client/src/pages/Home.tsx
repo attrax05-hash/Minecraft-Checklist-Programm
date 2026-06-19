@@ -1,11 +1,12 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
-import { X, Plus, Search } from 'lucide-react';
+import { X, Plus, Search, Download, Trash2 } from 'lucide-react';
 import { minecraftItems, searchItems, getItemImageUrl } from '@/lib/minecraftItems';
 import type { MinecraftItem } from '@/lib/minecraftItems';
+import { toast } from 'sonner';
 
 interface ChecklistItem extends MinecraftItem {
   quantity: number;
@@ -13,11 +14,35 @@ interface ChecklistItem extends MinecraftItem {
   id: string;
 }
 
+const STORAGE_KEY = 'minecraft-checklist-data';
+
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [checklist, setChecklist] = useState<ChecklistItem[]>([]);
   const [selectedItem, setSelectedItem] = useState<MinecraftItem | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Lade Checkliste aus localStorage beim Start
+  useEffect(() => {
+    const savedChecklist = localStorage.getItem(STORAGE_KEY);
+    if (savedChecklist) {
+      try {
+        const parsed = JSON.parse(savedChecklist);
+        setChecklist(parsed);
+      } catch (error) {
+        console.error('Fehler beim Laden der Checkliste:', error);
+      }
+    }
+    setIsLoading(false);
+  }, []);
+
+  // Speichere Checkliste in localStorage wenn sie sich ändert
+  useEffect(() => {
+    if (!isLoading) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(checklist));
+    }
+  }, [checklist, isLoading]);
 
   const searchResults = useMemo(() => {
     if (!searchQuery.trim()) return [];
@@ -35,10 +60,12 @@ export default function Home() {
     setSearchQuery('');
     setQuantity(1);
     setSelectedItem(null);
+    toast.success(`${item.name} hinzugefügt!`);
   };
 
   const handleRemoveFromChecklist = (id: string) => {
     setChecklist(checklist.filter((item) => item.id !== id));
+    toast.success('Item entfernt');
   };
 
   const handleToggleCheck = (id: string) => {
@@ -50,10 +77,61 @@ export default function Home() {
   };
 
   const handleClearChecklist = () => {
-    setChecklist([]);
+    if (window.confirm('Möchtest du wirklich alle Items löschen?')) {
+      setChecklist([]);
+      toast.success('Checkliste geleert');
+    }
+  };
+
+  const handleExportJSON = () => {
+    const dataStr = JSON.stringify(checklist, null, 2);
+    const dataBlob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(dataBlob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `minecraft-checklist-${new Date().toISOString().split('T')[0]}.json`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    toast.success('Checkliste als JSON exportiert');
+  };
+
+  const handleExportText = () => {
+    let text = 'MINECRAFT CHECKLIST\n';
+    text += `Exportiert: ${new Date().toLocaleString('de-DE')}\n`;
+    text += `Fortschritt: ${checklist.filter(i => i.checked).length} / ${checklist.length}\n`;
+    text += '\n=== ITEMS ===\n\n';
+
+    checklist.forEach((item) => {
+      const status = item.checked ? '✓' : '○';
+      text += `${status} ${item.name} (${item.category}) x${item.quantity}\n`;
+    });
+
+    const dataBlob = new Blob([text], { type: 'text/plain' });
+    const url = URL.createObjectURL(dataBlob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `minecraft-checklist-${new Date().toISOString().split('T')[0]}.txt`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    toast.success('Checkliste als Text exportiert');
   };
 
   const checkedCount = checklist.filter((item) => item.checked).length;
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-[#1a1a1a] flex items-center justify-center">
+        <div className="text-white text-center">
+          <div className="text-4xl mb-4">⛏️</div>
+          <p>Lädt...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white">
@@ -61,11 +139,7 @@ export default function Home() {
       <header className="border-b-4 border-[#8B7355] bg-[#2a2a2a] p-6 shadow-lg">
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663479248528/SRmXACUMB9gavYTJRaMQYb/minecraft-logo-mcDnB3MQfdxsmA9hDHd3DK.webp"
-              alt="Minecraft Checklist Logo"
-              className="h-12 w-12"
-            />
+            <div className="text-3xl">⛏️</div>
             <h1 className="text-3xl font-bold text-[#4CAF50]">
               MINECRAFT CHECKLIST
             </h1>
@@ -114,17 +188,8 @@ export default function Home() {
                               : 'border-[#3a3a3a] bg-[#2a2a2a] hover:border-[#4CAF50]'
                           }`}
                         >
-                          <div className="flex items-center gap-2">
-                            <img
-                              src={getItemImageUrl(item.imageId)}
-                              alt={item.name}
-                              className="h-6 w-6"
-                              onError={(e) => {
-                                (e.target as HTMLImageElement).style.display = 'none';
-                              }}
-                            />
-                            <span className="font-semibold">{item.name}</span>
-                          </div>
+                          <div className="font-semibold">{item.name}</div>
+                          <div className="text-xs text-[#999]">{item.category}</div>
                         </button>
                       ))}
                     </div>
@@ -139,22 +204,12 @@ export default function Home() {
               {/* Quantity Selector */}
               {selectedItem && (
                 <div className="mb-4 space-y-3 rounded border-2 border-[#8B7355] bg-[#1a1a1a] p-4">
-                  <div className="flex items-center gap-2">
-                    <img
-                      src={getItemImageUrl(selectedItem.imageId)}
-                      alt={selectedItem.name}
-                      className="h-8 w-8"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).style.display = 'none';
-                      }}
-                    />
-                    <div>
-                      <div className="font-bold text-[#4CAF50]">
-                        {selectedItem.name}
-                      </div>
-                      <div className="text-xs text-[#b0b0b0]">
-                        {selectedItem.category}
-                      </div>
+                  <div>
+                    <div className="font-bold text-[#4CAF50]">
+                      {selectedItem.name}
+                    </div>
+                    <div className="text-xs text-[#b0b0b0]">
+                      {selectedItem.category}
                     </div>
                   </div>
 
@@ -218,14 +273,7 @@ export default function Home() {
                       className="flex h-12 items-center justify-center rounded border-2 border-[#3a3a3a] bg-[#1a1a1a] transition-all hover:border-[#4CAF50] hover:bg-[#2a2a2a]"
                       title={item.name}
                     >
-                      <img
-                        src={getItemImageUrl(item.imageId)}
-                        alt={item.name}
-                        className="h-8 w-8"
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).style.display = 'none';
-                        }}
-                      />
+                      <span className="text-xl">{item.name.charAt(0)}</span>
                     </button>
                   ))}
                 </div>
@@ -240,16 +288,35 @@ export default function Home() {
                 <h2 className="text-xl font-bold text-[#4CAF50]">
                   DEINE CHECKLISTE
                 </h2>
-                {checklist.length > 0 && (
-                  <Button
-                    onClick={handleClearChecklist}
-                    variant="outline"
-                    className="border-2 border-[#FF6B35] text-[#FF6B35] hover:bg-[#FF6B35] hover:text-white"
-                  >
-                    <X className="mr-2 h-4 w-4" />
-                    LÖSCHEN
-                  </Button>
-                )}
+                <div className="flex gap-2">
+                  {checklist.length > 0 && (
+                    <>
+                      <Button
+                        onClick={handleExportJSON}
+                        variant="outline"
+                        className="border-2 border-[#4CAF50] text-[#4CAF50] hover:bg-[#4CAF50] hover:text-[#1a1a1a]"
+                        title="Als JSON exportieren"
+                      >
+                        <Download className="h-4 w-4" />
+                      </Button>
+                      <Button
+                        onClick={handleExportText}
+                        variant="outline"
+                        className="border-2 border-[#FFD700] text-[#FFD700] hover:bg-[#FFD700] hover:text-[#1a1a1a]"
+                        title="Als Text exportieren"
+                      >
+                        <Download className="h-4 w-4" />
+                      </Button>
+                      <Button
+                        onClick={handleClearChecklist}
+                        variant="outline"
+                        className="border-2 border-[#FF6B35] text-[#FF6B35] hover:bg-[#FF6B35] hover:text-white"
+                      >
+                        <Trash2 className="h-4 w-4" />
+                      </Button>
+                    </>
+                  )}
+                </div>
               </div>
 
               {checklist.length === 0 ? (
@@ -276,14 +343,6 @@ export default function Home() {
                         checked={item.checked}
                         onCheckedChange={() => handleToggleCheck(item.id)}
                         className="h-6 w-6 border-2 border-[#4CAF50]"
-                      />
-                      <img
-                        src={getItemImageUrl(item.imageId)}
-                        alt={item.name}
-                        className="h-8 w-8"
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).style.display = 'none';
-                        }}
                       />
                       <div className="flex-1">
                         <div
