@@ -248,8 +248,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'ancient_debris': {
     id: 'ancient_debris',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Nether: Y: 15',
     recipe: 'Abbau oder Crafting',
     miningRequirement: 'Variiert',
@@ -2318,8 +2316,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'coal_ore': {
     id: 'coal_ore',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Berg: Y: 96 / Tiefer: Y: 0',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
@@ -2759,8 +2755,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'copper_ore': {
     id: 'copper_ore',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Y: 48',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
@@ -3740,8 +3734,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'deepslate_coal_ore': {
     id: 'deepslate_coal_ore',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Berg: Y: 96 / Tiefer: Y: 0',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
@@ -3749,8 +3741,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'deepslate_copper_ore': {
     id: 'deepslate_copper_ore',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Y: 48',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
@@ -3758,8 +3748,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'deepslate_diamond_ore': {
     id: 'deepslate_diamond_ore',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Y: -53 bis -59 (Optimal: Y: -58)',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
@@ -3776,8 +3764,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'deepslate_gold_ore': {
     id: 'deepslate_gold_ore',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Y: -16 (Mesa-Biome: über Y: 30)',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
@@ -3785,8 +3771,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'deepslate_iron_ore': {
     id: 'deepslate_iron_ore',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Berg: Y: 232 / Untergrund: Y: 16',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
@@ -3794,8 +3778,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'deepslate_lapis_ore': {
     id: 'deepslate_lapis_ore',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Y: -32 bis -34',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
@@ -3803,8 +3785,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'deepslate_redstone_ore': {
     id: 'deepslate_redstone_ore',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Y: -59',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
@@ -3938,8 +3918,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'diamond_ore': {
     id: 'diamond_ore',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Y: -53 bis -59 (Optimal: Y: -58)',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
@@ -4991,8 +4969,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'gold_ore': {
     id: 'gold_ore',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Y: -16 (Mesa-Biome: über Y: 30)',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
@@ -5882,8 +5858,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'iron_ore': {
     id: 'iron_ore',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Berg: Y: 232 / Untergrund: Y: 16',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
@@ -6179,8 +6153,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'lapis_ore': {
     id: 'lapis_ore',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Y: -32 bis -34',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
@@ -10058,8 +10030,6 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'redstone_ore': {
     id: 'redstone_ore',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
     height: 'Y: -59',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
