@@ -484,7 +484,7 @@ export default function Home() {
               </Button>
             </div>
           ) : (
-            <div className="space-y-2 max-h-96 overflow-y-auto">
+            <div className="space-y-2 max-h-[calc(100vh-500px)] overflow-y-auto">
               {checklist.map((item) => (
                 <div key={item.id} className="flex items-center gap-2 p-2 bg-[#1a1a1a] border border-[#4CAF50] rounded">
                   <Checkbox
