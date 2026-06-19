@@ -1,13 +1,14 @@
-// Minecraft Items Database with real PNG icons from texture pack
 // Source: Minecraft Wiki and Game Data
 
 import imageMapping from './imageMapping.json';
+import imageUrlMapping from './imageUrlMapping.json';
 
 export interface MinecraftItem {
   id: string;
   name: string;
   category: 'ore' | 'ingot' | 'block' | 'tool' | 'weapon' | 'armor' | 'food' | 'material' | 'decoration' | 'other';
   imageId: string; // ID für die Bildsuche
+  imageUrl?: string; // Direkte URL zum Bild
 }
 
 // Erstelle Items aus dem Image-Mapping
@@ -42,11 +43,13 @@ const createItemsFromMapping = (): MinecraftItem[] => {
 
   // Erstelle Items aus dem Mapping
   Object.entries(imageMapping).forEach(([imageId, germanName]) => {
+    const imageUrl = (imageUrlMapping as Record<string, string>)[imageId];
     items.push({
       id: imageId,
       name: germanName as string,
       category: categorizeItem(imageId),
       imageId: imageId,
+      imageUrl: imageUrl || `/manus-storage/${imageId}.png`,
     });
   });
 
@@ -57,8 +60,8 @@ export const minecraftItems = createItemsFromMapping();
 
 // Funktion zum Abrufen der Bild-URL
 export const getItemImageUrl = (imageId: string): string => {
-  // Verwende die statischen Assets
-  return `/manus-storage/minecraft-blocks/${imageId}.png`;
+  const url = (imageUrlMapping as Record<string, string>)[imageId];
+  return url || `/manus-storage/${imageId}.png`;
 };
 
 export function searchItems(query: string): MinecraftItem[] {

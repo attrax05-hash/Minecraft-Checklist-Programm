@@ -182,14 +182,24 @@ export default function Home() {
                         <button
                           key={item.id}
                           onClick={() => setSelectedItem(item)}
-                          className={`w-full rounded border-2 p-3 text-left transition-all ${
+                          className={`w-full rounded border-2 p-3 text-left transition-all flex items-center gap-3 ${
                             selectedItem?.id === item.id
                               ? 'border-[#4CAF50] bg-[#4CAF50] text-[#1a1a1a]'
                               : 'border-[#3a3a3a] bg-[#2a2a2a] hover:border-[#4CAF50]'
                           }`}
                         >
-                          <div className="font-semibold">{item.name}</div>
-                          <div className="text-xs text-[#999]">{item.category}</div>
+                          <img
+                            src={item.imageUrl || getItemImageUrl(item.id)}
+                            alt={item.name}
+                            className="h-8 w-8 object-contain"
+                            onError={(e) => {
+                              (e.target as HTMLImageElement).style.display = 'none';
+                            }}
+                          />
+                          <div>
+                            <div className="font-semibold">{item.name}</div>
+                            <div className="text-xs text-[#999]">{item.category}</div>
+                          </div>
                         </button>
                       ))}
                     </div>
@@ -204,12 +214,22 @@ export default function Home() {
               {/* Quantity Selector */}
               {selectedItem && (
                 <div className="mb-4 space-y-3 rounded border-2 border-[#8B7355] bg-[#1a1a1a] p-4">
-                  <div>
-                    <div className="font-bold text-[#4CAF50]">
-                      {selectedItem.name}
-                    </div>
-                    <div className="text-xs text-[#b0b0b0]">
-                      {selectedItem.category}
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={selectedItem.imageUrl || getItemImageUrl(selectedItem.id)}
+                      alt={selectedItem.name}
+                      className="h-12 w-12 object-contain"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                    <div>
+                      <div className="font-bold text-[#4CAF50]">
+                        {selectedItem.name}
+                      </div>
+                      <div className="text-xs text-[#b0b0b0]">
+                        {selectedItem.category}
+                      </div>
                     </div>
                   </div>
 
@@ -273,7 +293,14 @@ export default function Home() {
                       className="flex h-12 items-center justify-center rounded border-2 border-[#3a3a3a] bg-[#1a1a1a] transition-all hover:border-[#4CAF50] hover:bg-[#2a2a2a]"
                       title={item.name}
                     >
-                      <span className="text-xl">{item.name.charAt(0)}</span>
+                      <img
+                        src={item.imageUrl || getItemImageUrl(item.id)}
+                        alt={item.name}
+                        className="h-8 w-8 object-contain"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
                     </button>
                   ))}
                 </div>
@@ -343,6 +370,14 @@ export default function Home() {
                         checked={item.checked}
                         onCheckedChange={() => handleToggleCheck(item.id)}
                         className="h-6 w-6 border-2 border-[#4CAF50]"
+                      />
+                      <img
+                        src={item.imageUrl || getItemImageUrl(item.id)}
+                        alt={item.name}
+                        className="h-8 w-8 object-contain"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
                       />
                       <div className="flex-1">
                         <div
