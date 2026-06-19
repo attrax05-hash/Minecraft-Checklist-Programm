@@ -2298,9 +2298,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'coal': {
     id: 'coal',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
-    height: 'Mining: Coal Ore → Coal',
+    height: 'Berg: Y: 96 / Tiefer: Y: 0',
     recipe: 'Abbau oder Crafting',
     miningRequirement: 'Variiert',
     recipeUrl: 'https://minecraft-craftings.com/#coal'
@@ -2719,9 +2717,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'copper_ingot': {
     id: 'copper_ingot',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
-    height: 'Smelting: 1x Copper Ore → 1x Copper Ingot',
+    height: 'Y: 48',
     recipe: 'Abbau oder Crafting',
     miningRequirement: 'Variiert',
     recipeUrl: 'https://minecraft-craftings.com/#copper_ingot'
@@ -3755,9 +3751,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'deepslate_emerald_ore': {
     id: 'deepslate_emerald_ore',
-    location: 'Tiefe Untergrund',
-    biomes: 'Berge',
-    height: 'Y: -16-256',
+    height: 'Bergen: Y: 232',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
     recipeUrl: 'https://minecraft-craftings.com/#deepslate_emerald_ore'
@@ -3837,9 +3831,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'diamond': {
     id: 'diamond',
-    location: 'Verschiedene Orte',
-    biomes: 'Überall',
-    height: 'Y: -64-256',
+    height: 'Y: -53 bis -59 (Optimal: Y: -58)',
     recipe: 'Abbau oder Crafting',
     miningRequirement: 'Variiert',
     recipeUrl: 'https://minecraft-craftings.com/#diamond'
@@ -4168,9 +4160,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'emerald': {
     id: 'emerald',
-    location: 'Verschiedene Orte',
-    biomes: 'Überall',
-    height: 'Y: -64-256',
+    height: 'Bergen: Y: 232',
     recipe: 'Abbau oder Crafting',
     miningRequirement: 'Variiert',
     recipeUrl: 'https://minecraft-craftings.com/#emerald'
@@ -4186,9 +4176,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'emerald_ore': {
     id: 'emerald_ore',
-    location: 'Untergrund',
-    biomes: 'Berge',
-    height: 'Y: -16-256',
+    height: 'Bergen: Y: 232',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Steinspitzhacke oder besser',
     recipeUrl: 'https://minecraft-craftings.com/#emerald_ore'
@@ -4951,9 +4939,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'gold_ingot': {
     id: 'gold_ingot',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
-    height: 'Smelting: 1x Gold Ore → 1x Gold Ingot',
+    height: 'Y: -16 (Mesa-Biome: über Y: 30)',
     recipe: 'Abbau oder Crafting',
     miningRequirement: 'Variiert',
     recipeUrl: 'https://minecraft-craftings.com/#gold_ingot'
@@ -5831,9 +5817,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'iron_ingot': {
     id: 'iron_ingot',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
-    height: 'Smelting: 1x Iron Ore → 1x Iron Ingot',
+    height: 'Berg: Y: 232 / Untergrund: Y: 16',
     recipe: 'Abbau oder Crafting',
     miningRequirement: 'Variiert',
     recipeUrl: 'https://minecraft-craftings.com/#iron_ingot'
@@ -6144,9 +6128,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'lapis_lazuli': {
     id: 'lapis_lazuli',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
-    height: 'Mining: Lapis Ore → Lapis Lazuli',
+    height: 'Y: -32 bis -34',
     recipe: 'Abbau oder Crafting',
     miningRequirement: 'Variiert',
     recipeUrl: 'https://minecraft-craftings.com/#lapis_lazuli'
@@ -7771,9 +7753,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'netherite_ingot': {
     id: 'netherite_ingot',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
-    height: 'Smelting: 1x Ancient Debris → 1x Netherite Scrap',
+    height: 'Nether: Y: 15',
     recipe: 'Abbau oder Crafting',
     miningRequirement: 'Variiert',
     recipeUrl: 'https://minecraft-craftings.com/#netherite_ingot'
@@ -7798,9 +7778,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'netherite_scrap': {
     id: 'netherite_scrap',
-    location: 'Verschiedene Orte',
-    biomes: 'Überall',
-    height: 'Y: -64-256',
+    height: 'Nether: Y: 15',
     recipe: 'Abbau oder Crafting',
     miningRequirement: 'Variiert',
     recipeUrl: 'https://minecraft-craftings.com/#netherite_scrap'
@@ -9697,9 +9675,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'raw_copper': {
     id: 'raw_copper',
-    location: 'Verschiedene Orte',
-    biomes: 'Überall',
-    height: 'Y: -64-256',
+    height: 'Y: 48',
     recipe: 'Abbau oder Crafting',
     miningRequirement: 'Variiert',
     recipeUrl: 'https://minecraft-craftings.com/#raw_copper'
@@ -9715,9 +9691,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'raw_gold': {
     id: 'raw_gold',
-    location: 'Verschiedene Orte',
-    biomes: 'Überall',
-    height: 'Y: -64-256',
+    height: 'Y: -16 (Mesa-Biome: über Y: 30)',
     recipe: 'Abbau oder Crafting',
     miningRequirement: 'Variiert',
     recipeUrl: 'https://minecraft-craftings.com/#raw_gold'
@@ -9733,9 +9707,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'raw_iron': {
     id: 'raw_iron',
-    location: 'Verschiedene Orte',
-    biomes: 'Überall',
-    height: 'Y: -64-256',
+    height: 'Berg: Y: 232 / Untergrund: Y: 16',
     recipe: 'Abbau oder Crafting',
     miningRequirement: 'Variiert',
     recipeUrl: 'https://minecraft-craftings.com/#raw_iron'
@@ -10003,9 +9975,7 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
   },
   'redstone': {
     id: 'redstone',
-    location: 'Mining/Crafting',
-    biomes: 'Varies',
-    height: 'Mining: Redstone Ore → Redstone',
+    height: 'Y: -59',
     recipe: 'Abbau mit Spitzhacke',
     miningRequirement: 'Holzspitzhacke oder besser',
     recipeUrl: 'https://minecraft-craftings.com/#redstone'
