@@ -249,9 +249,13 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Info Modal */}
-          {selectedItem && (
-            <div className="mt-6 p-4 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded">
+
+        </div>
+
+        {/* Info Modal - Positioniert nach der Suchleiste */}
+        {selectedItem && (
+          <div className="border-4 border-[#8B7355] rounded-lg p-6 bg-[#2a2a2a]">
+            <div className="p-4 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
                   <img
@@ -344,35 +348,33 @@ export default function Home() {
                 <div className="space-y-2 text-xs text-[#b0b0b0]">
                   <div>
                     <p className="text-[#FFD700] font-bold">Biom:</p>
-                    <p>Überall</p>
+                    <p>{getItemDetails(selectedItem.id)?.biomes || 'Überall'}</p>
                   </div>
                   <div>
                     <p className="text-[#FFD700] font-bold">Höhe:</p>
-                    <p>Überall</p>
+                    <p>{getItemDetails(selectedItem.id)?.height || 'Y: -64-256'}</p>
                   </div>
                   <div>
                     <p className="text-[#FFD700] font-bold">Herstellung:</p>
-                    <p>Siehe Crafting-Link</p>
+                    <p>{getItemDetails(selectedItem.id)?.recipe || 'Crafting'}</p>
                   </div>
-                  <div>
-                    <a
-                      href="https://minecraft-craftings.com/#google_vignette"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#4CAF50] hover:text-[#45a049] underline"
-                    >
-                      🔗 Crafting-Rezept anschauen
-                    </a>
-                  </div>
-                  <div>
-                    <p className="text-[#FFD700] font-bold">Verfügbarkeit:</p>
-                    <p>Survival &amp; Creative</p>
-                  </div>
+                  {getItemDetails(selectedItem.id)?.recipeUrl && (
+                    <div>
+                      <a
+                        href={getItemDetails(selectedItem.id)?.recipeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#4CAF50] hover:underline"
+                      >
+                        📖 Crafting Guide
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* Rechte Spalte: Checkliste */}
         <div className="border-4 border-[#8B7355] rounded-lg p-6 bg-[#2a2a2a]">
@@ -443,7 +445,7 @@ export default function Home() {
                 <div key={item.id} className="flex items-center gap-3 p-4 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded">
                   <Checkbox
                     checked={item.checked}
-                    onChange={() => toggleItem(item.id)}
+                    onCheckedChange={() => toggleItem(item.id)}
                     className="border-[#4CAF50] w-6 h-6"
                   />
                   <img
