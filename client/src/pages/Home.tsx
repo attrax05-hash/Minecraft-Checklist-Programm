@@ -91,7 +91,6 @@ export default function Home() {
   };
 
   const categories = getCategories();
-  const popularItems = minecraftItems.slice(0, 8);
   const searchResults = filteredItems();
 
   // Berechne Statistiken
@@ -226,28 +225,6 @@ export default function Home() {
                 ))}
               </TabsList>
             </Tabs>
-          </div>
-
-          {/* Beliebte Items */}
-          <div className="mb-6">
-            <p className="text-[#FFD700] font-bold mb-3">BELIEBTE ITEMS:</p>
-            <div className="grid grid-cols-4 gap-2">
-              {popularItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => setSelectedItem(item)}
-                  className="p-2 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
-                  title={item.name}
-                >
-                  <img
-                    src={item.imageUrl || getItemImageUrl(item.id)}
-                    alt={item.name}
-                    className="h-10 w-10 object-contain mx-auto"
-                    style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }}
-                  />
-                </button>
-              ))}
-            </div>
           </div>
 
           {/* Suchergebnisse */}
