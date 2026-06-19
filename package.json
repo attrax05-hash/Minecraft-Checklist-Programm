@@ -1,6 +1,10 @@
 {
+{
   "name": "minecraft-checklist",
   "version": "1.0.0",
+  "description": "A desktop app to manage your Minecraft collection with crafting info and ore heights",
+  "author": "attrax05-hash",
+
   "type": "module",
   "license": "MIT",
   "main": "dist/electron/main.js",
@@ -145,14 +149,12 @@
       ],
       "category": "public.app-category.utilities"
     },
-   "linux": {
+"linux": {
   "target": [
     "AppImage",
     "deb"
   ],
-  "category": "Utility",
-  "desktopName": "Minecraft Checklist",
-  "syncDesktopName": true
+  "category": "Utility"
 }
 
   },
