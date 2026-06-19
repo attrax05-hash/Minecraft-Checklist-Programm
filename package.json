@@ -145,13 +145,16 @@
       ],
       "category": "public.app-category.utilities"
     },
-    "linux": {
-      "target": [
-        "AppImage",
-        "deb"
-      ],
-      "category": "Utility"
-    }
+   "linux": {
+  "target": [
+    "AppImage",
+    "deb"
+  ],
+  "category": "Utility",
+  "desktopName": "Minecraft Checklist",
+  "syncDesktopName": true
+}
+
   },
   "pnpm": {
     "patchedDependencies": {
