@@ -30,7 +30,8 @@ jobs:
         run: npx tsc electron/main.ts electron/preload.ts --outDir dist/electron --module esnext --target es2020 --moduleResolution node
       
       - name: Build with electron-builder
-        run: npx electron-builder
+        run: npx electron-builder --publish never
+
       
       - name: Upload artifacts to Release
         uses: softprops/action-gh-release@v2
