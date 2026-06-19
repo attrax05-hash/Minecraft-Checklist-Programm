@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
 import { X, Plus, Search } from 'lucide-react';
-import { minecraftItems, searchItems } from '@/lib/minecraftItems';
+import { minecraftItems, searchItems, getItemImageUrl } from '@/lib/minecraftItems';
 import type { MinecraftItem } from '@/lib/minecraftItems';
 
 interface ChecklistItem extends MinecraftItem {
@@ -115,7 +115,14 @@ export default function Home() {
                           }`}
                         >
                           <div className="flex items-center gap-2">
-                            <span className="text-2xl">{item.icon}</span>
+                            <img
+                              src={getItemImageUrl(item.imageId)}
+                              alt={item.name}
+                              className="h-6 w-6"
+                              onError={(e) => {
+                                (e.target as HTMLImageElement).style.display = 'none';
+                              }}
+                            />
                             <span className="font-semibold">{item.name}</span>
                           </div>
                         </button>
@@ -133,7 +140,14 @@ export default function Home() {
               {selectedItem && (
                 <div className="mb-4 space-y-3 rounded border-2 border-[#8B7355] bg-[#1a1a1a] p-4">
                   <div className="flex items-center gap-2">
-                    <span className="text-2xl">{selectedItem.icon}</span>
+                    <img
+                      src={getItemImageUrl(selectedItem.imageId)}
+                      alt={selectedItem.name}
+                      className="h-8 w-8"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
                     <div>
                       <div className="font-bold text-[#4CAF50]">
                         {selectedItem.name}
@@ -188,7 +202,7 @@ export default function Home() {
                 </div>
               )}
 
-              {/* Quick Add - All Items */}
+              {/* Quick Add - Popular Items */}
               <div className="space-y-2">
                 <p className="text-xs font-semibold text-[#FFD700]">
                   BELIEBTE ITEMS:
@@ -201,10 +215,17 @@ export default function Home() {
                         setSelectedItem(item);
                         setSearchQuery('');
                       }}
-                      className="flex h-12 items-center justify-center rounded border-2 border-[#3a3a3a] bg-[#1a1a1a] text-2xl transition-all hover:border-[#4CAF50] hover:bg-[#2a2a2a]"
+                      className="flex h-12 items-center justify-center rounded border-2 border-[#3a3a3a] bg-[#1a1a1a] transition-all hover:border-[#4CAF50] hover:bg-[#2a2a2a]"
                       title={item.name}
                     >
-                      {item.icon}
+                      <img
+                        src={getItemImageUrl(item.imageId)}
+                        alt={item.name}
+                        className="h-8 w-8"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
                     </button>
                   ))}
                 </div>
@@ -256,7 +277,14 @@ export default function Home() {
                         onCheckedChange={() => handleToggleCheck(item.id)}
                         className="h-6 w-6 border-2 border-[#4CAF50]"
                       />
-                      <span className="text-2xl">{item.icon}</span>
+                      <img
+                        src={getItemImageUrl(item.imageId)}
+                        alt={item.name}
+                        className="h-8 w-8"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
                       <div className="flex-1">
                         <div
                           className={`font-semibold ${
