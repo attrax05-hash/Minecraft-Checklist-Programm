@@ -3,9 +3,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
-import { X, Plus, Search, Download, Trash2 } from 'lucide-react';
+import { X, Plus, Search, Download, Trash2, Info } from 'lucide-react';
 import { minecraftItems, searchItems, getItemImageUrl } from '@/lib/minecraftItems';
 import type { MinecraftItem } from '@/lib/minecraftItems';
+import { getItemDetails } from '@/lib/itemDetails';
 import { toast } from 'sonner';
 
 interface ChecklistItem extends MinecraftItem {
@@ -25,6 +26,7 @@ export default function Home() {
   const [checklist, setChecklist] = useState<ChecklistItem[]>([]);
   const [selectedItem, setSelectedItem] = useState<MinecraftItem | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [infoItem, setInfoItem] = useState<MinecraftItem | null>(null);
 
   // Lade Checkliste aus localStorage beim Start
   useEffect(() => {
@@ -481,6 +483,13 @@ export default function Home() {
                           {formatQuantity(item.stacks, item.items)}
                         </div>
                         <Button
+                          onClick={() => setInfoItem(item)}
+                          className="h-8 w-8 border-2 border-[#FFD700] bg-transparent p-0 text-[#FFD700] hover:bg-[#FFD700] hover:text-[#1a1a1a]"
+                          title="Info anzeigen"
+                        >
+                          <Info className="h-4 w-4" />
+                        </Button>
+                        <Button
                           onClick={() => handleRemoveFromChecklist(item.id)}
                           className="h-8 w-8 border-2 border-[#FF6B35] bg-transparent p-0 text-[#FF6B35] hover:bg-[#FF6B35] hover:text-white"
                         >
@@ -515,6 +524,76 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      {/* Info Modal */}
+      {infoItem && (() => {
+        const details = getItemDetails(infoItem.id);
+        return (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+            <Card className="border-4 border-[#8B7355] bg-[#2a2a2a] p-6 shadow-2xl max-w-2xl max-h-[80vh] overflow-y-auto">
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-4">
+                  <img
+                    src={infoItem.imageUrl || getItemImageUrl(infoItem.id)}
+                    alt={infoItem.name}
+                    className="h-16 w-16 object-contain"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                  />
+                  <div>
+                    <h2 className="text-2xl font-bold text-[#4CAF50]">{infoItem.name}</h2>
+                    <p className="text-sm text-[#b0b0b0]">{infoItem.category.toUpperCase()}</p>
+                  </div>
+                </div>
+                <Button
+                  onClick={() => setInfoItem(null)}
+                  className="h-8 w-8 border-2 border-[#FF6B35] bg-transparent p-0 text-[#FF6B35] hover:bg-[#FF6B35] hover:text-white"
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              </div>
+
+              <div className="space-y-4">
+                {details?.location && (
+                  <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
+                    <h3 className="font-bold text-[#FFD700] mb-2">📍 FUNDORT</h3>
+                    <p className="text-white">{details.location}</p>
+                  </div>
+                )}
+
+                {details?.biomes && (
+                  <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
+                    <h3 className="font-bold text-[#FFD700] mb-2">🌍 BIOME</h3>
+                    <p className="text-white">{details.biomes}</p>
+                  </div>
+                )}
+
+                {details?.height && (
+                  <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
+                    <h3 className="font-bold text-[#FFD700] mb-2">📏 HÖHE</h3>
+                    <p className="text-white">{details.height}</p>
+                  </div>
+                )}
+
+                {details?.recipe && (
+                  <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
+                    <h3 className="font-bold text-[#FFD700] mb-2">🔨 HERSTELLUNG</h3>
+                    <p className="text-white whitespace-pre-wrap">{details.recipe}</p>
+                  </div>
+                )}
+
+                {details?.description && (
+                  <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
+                    <h3 className="font-bold text-[#FFD700] mb-2">ℹ️ BESCHREIBUNG</h3>
+                    <p className="text-white">{details.description}</p>
+                  </div>
+                )}
+              </div>
+            </Card>
+          </div>
+        );
+      })()}
     </div>
   );
 }
