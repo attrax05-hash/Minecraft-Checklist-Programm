@@ -210,6 +210,55 @@ export default function Home() {
         </p>
       </div>
 
+      {/* HOTBAR */}
+      <div className="mb-6 bg-[#2a2a2a] border-4 border-[#8B7355] rounded-lg p-4">
+        <p className="text-[#FFD700] font-bold mb-3 text-sm">KATEGORIEN-HOTBAR:</p>
+        <div className="flex gap-2 overflow-x-auto pb-2">
+          <button
+            onClick={() => setSelectedCategory('block')}
+            className="flex-shrink-0 p-3 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
+            title="Blöcke"
+          >
+            <img src={getItemImageUrl('dirt')} alt="Blöcke" className="h-10 w-10 object-contain" style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }} />
+          </button>
+          <button
+            onClick={() => setSelectedCategory('weapon')}
+            className="flex-shrink-0 p-3 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
+            title="Waffen"
+          >
+            <img src={getItemImageUrl('diamond_sword')} alt="Waffen" className="h-10 w-10 object-contain" style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }} />
+          </button>
+          <button
+            onClick={() => setSelectedCategory('armor')}
+            className="flex-shrink-0 p-3 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
+            title="Rüstung"
+          >
+            <img src={getItemImageUrl('diamond_helmet')} alt="Rüstung" className="h-10 w-10 object-contain" style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }} />
+          </button>
+          <button
+            onClick={() => setSelectedCategory('food')}
+            className="flex-shrink-0 p-3 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
+            title="Essen"
+          >
+            <img src={getItemImageUrl('cooked_beef')} alt="Essen" className="h-10 w-10 object-contain" style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }} />
+          </button>
+          <button
+            onClick={() => setSelectedCategory('redstone')}
+            className="flex-shrink-0 p-3 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
+            title="Redstone"
+          >
+            <img src={getItemImageUrl('redstone')} alt="Redstone" className="h-10 w-10 object-contain" style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }} />
+          </button>
+          <button
+            onClick={() => setSelectedCategory('decoration')}
+            className="flex-shrink-0 p-3 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
+            title="Dekoration"
+          >
+            <img src={getItemImageUrl('oak_door')} alt="Dekoration" className="h-10 w-10 object-contain" style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }} />
+          </button>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Linke Spalte: Item Suche */}
         <div className="border-4 border-[#8B7355] rounded-lg p-6 bg-[#2a2a2a]">
@@ -298,7 +347,15 @@ export default function Home() {
                   />
                 <div>
                   <h3 className="text-lg font-bold text-[#4CAF50]">{selectedItem.name}</h3>
+                  {selectedItem.englishName && selectedItem.englishName !== selectedItem.name && (
+                    <p className="text-sm text-[#FFD700]">{selectedItem.englishName}</p>
+                  )}
                   <p className="text-sm text-[#b0b0b0]">{selectedItem.category}</p>
+                  {(selectedItem.creativeOnly || selectedItem.survivalOnly) && (
+                    <p className="text-xs text-[#FF6B35] mt-1">
+                      {selectedItem.creativeOnly ? '🎨 Creative Only' : selectedItem.survivalOnly ? '⛏️ Survival Only' : ''}
+                    </p>
+                  )}
                 </div>
               </div>
 

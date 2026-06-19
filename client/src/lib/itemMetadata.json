@@ -1,0 +1,7546 @@
+{
+  "acacia_boat": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "acacia_boat_with_chest": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "acacia_button": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "acacia_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "acacia_fence": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "acacia_fence_gate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "acacia_hanging_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "acacia_leaves": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "acacia_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "acacia_planks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "acacia_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "acacia_sapling": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "acacia_shelf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "acacia_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "acacia_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "acacia_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "acacia_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "acacia_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "activator_rail": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "allay_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "allium": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "amethyst_cluster": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "amethyst_shard": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ancient_debris": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "andesite": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "andesite_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "andesite_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "andesite_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "angler_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "anvil": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "apple": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "archer_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "armadillo_scute": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "armadillo_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "armor_stand": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "arms_up_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_fire_resistance___fire_resistance_0:22": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_fire_resistance___fire_resistance_1:00": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_harming___instant_damage": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_harming___instant_damage_ii": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_healing___instant_health": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_healing___instant_health_ii": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_infestation___infested_0:22": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_invisibility___invisibility_0:22": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_invisibility___invisibility_1:00": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_leaping___jump_boost_0:22": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_leaping___jump_boost_1:00": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_leaping___jump_boost_ii_0:11": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_luck\u200c___luck_0:37": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "arrow_of_night_vision___night_vision_0:22": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_night_vision___night_vision_1:00": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_oozing___oozing_0:22": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_poison___poison_0:05": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_poison___poison_0:11": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_poison___poison_ii_0:02": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_regeneration___regeneration_0:05": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_regeneration___regeneration_0:11": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_regeneration___regeneration_ii_0:02": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_slow_falling___slow_falling_0:11": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_slow_falling___slow_falling_0:30": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_slowness___slowness_0:11": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_slowness___slowness_0:30": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_slowness___slowness_iv_0:02": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_splashing": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_strength___strength_0:22": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_strength___strength_1:00": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_strength___strength_ii_0:11": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_swiftness___speed_0:22": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_swiftness___speed_1:00": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_swiftness___speed_ii_0:11": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_the_turtle_master___..._iv_..._iii_0:02": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_the_turtle_master___..._iv_..._iii_0:05": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_the_turtle_master___..._vi_..._iv_0:02": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_water_breathing___water_breathing_0:22": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_water_breathing___water_breathing_1:00": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_weakness___weakness_0:11": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_weakness___weakness_0:30": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_weaving___weaving_0:22": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "arrow_of_wind_charging___wind_charged_0:22": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "awkward_lingering_potion": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "awkward_potion": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "awkward_splash_potion": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "axolotl_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "azalea": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "azalea_leaves": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "azure_bluet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "baked_potato": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bamboo": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bamboo_button": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bamboo_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bamboo_fence": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bamboo_fence_gate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bamboo_hanging_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "bamboo_mosaic": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bamboo_mosaic_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bamboo_mosaic_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bamboo_planks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bamboo_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bamboo_raft": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "bamboo_raft_with_chest": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "bamboo_shelf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bamboo_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "bamboo_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bamboo_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bamboo_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "barrel": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "barrier": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "basalt": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bat_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "beacon": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bedrock": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "bee_nest": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bee_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "beehive": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "beetroot": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "beetroot_seeds": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "beetroot_soup": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "bell": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "big_dripleaf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "birch_boat": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "birch_boat_with_chest": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "birch_button": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "birch_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "birch_fence": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "birch_fence_gate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "birch_hanging_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "birch_leaves": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "birch_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "birch_planks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "birch_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "birch_sapling": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "birch_shelf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "birch_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "birch_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "birch_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "birch_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "birch_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "black_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "black_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "black_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "black_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "black_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "black_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "black_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "black_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "black_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "black_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "black_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "black_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "black_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "black_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "black_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "black_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blackstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blackstone_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blackstone_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blackstone_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blade_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blast_furnace": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blaze_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blaze_rod": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blaze_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "block_of_amethyst": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_bamboo": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_coal": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_diamond": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_emerald": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_gold": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_iron": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_lapis_lazuli": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_netherite": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_quartz": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_raw_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_raw_gold": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_raw_iron": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_redstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_resin": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "block_of_stripped_bamboo": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blue_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "blue_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "blue_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "blue_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blue_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blue_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blue_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blue_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blue_egg": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "blue_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blue_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "blue_ice": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blue_orchid": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blue_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "blue_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "blue_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blue_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blue_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "blue_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bogged_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "bolt_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bone_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bone_meal": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "book": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "book_and_quill": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "bookshelf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bordure_indented_banner_pattern": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "bottle_o'_enchanting": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bow": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "bowl": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brain_coral": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brain_coral_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brain_coral_fan": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bread": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "breeze_rod": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "breeze_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "brewer_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brewing_stand": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brick": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brick_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brick_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brick_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brown_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "brown_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "brown_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "brown_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brown_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brown_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brown_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brown_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brown_egg": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "brown_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brown_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "brown_mushroom": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brown_mushroom_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brown_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "brown_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "brown_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brown_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brown_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brown_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "brush": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "bubble_coral": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bubble_coral_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bubble_coral_fan": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bucket": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "bucket_of_axolotl": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "bucket_of_cod": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "bucket_of_pufferfish": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "bucket_of_salmon": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "bucket_of_sulfur_cube": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "bucket_of_tadpole": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "bucket_of_tropical_fish": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "budding_amethyst": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "buried_treasure_map": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "burn_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "bush": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cactus": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cactus_flower": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cake": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "calcite": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "calibrated_sculk_sensor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "camel_husk_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "camel_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "campfire": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "carrot": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "carrot_on_a_stick": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "cartography_table": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "carved_pumpkin": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cat_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "cauldron": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cave_spider_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "chain": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chain_command_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chainmail_boots": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "chainmail_chestplate": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "chainmail_helmet": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "chainmail_leggings": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "charcoal": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cherry_boat": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "cherry_boat_with_chest": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "cherry_button": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cherry_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cherry_fence": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cherry_fence_gate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cherry_hanging_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "cherry_leaves": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cherry_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cherry_planks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cherry_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cherry_sapling": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cherry_shelf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cherry_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "cherry_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cherry_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cherry_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cherry_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chest": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chicken_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "chipped_anvil": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chiseled_bookshelf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chiseled_cinnabar": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chiseled_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chiseled_deepslate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chiseled_nether_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chiseled_polished_blackstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chiseled_quartz_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chiseled_red_sandstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chiseled_resin_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chiseled_sandstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chiseled_stone_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chiseled_sulfur": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chiseled_tuff": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chiseled_tuff_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chorus_flower": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chorus_fruit": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "chorus_plant": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "cinnabar": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cinnabar_brick_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cinnabar_brick_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cinnabar_brick_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cinnabar_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cinnabar_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cinnabar_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cinnabar_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "clay": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "clay_ball": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "clock": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "closed_eyeblossom": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "coal": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "coal_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "coarse_dirt": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "coast_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cobbled_deepslate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cobbled_deepslate_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cobbled_deepslate_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cobbled_deepslate_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cobblestone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cobblestone_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cobblestone_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cobblestone_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cobweb": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cocoa_beans": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cod_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "command_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "compass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "composter": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "conduit": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cooked_chicken": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cooked_cod": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cooked_mutton": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cooked_porkchop": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cooked_rabbit": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cooked_salmon": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cookie": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "copper_axe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "copper_bars": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "copper_boots": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "copper_bulb": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "copper_chain": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "copper_chest": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "copper_chestplate": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "copper_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "copper_golem_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "copper_golem_statue": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "copper_grate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "copper_helmet": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "copper_hoe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "copper_horse_armor": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "copper_ingot": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "copper_lantern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "copper_leggings": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "copper_nautilus_armor": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "copper_nugget": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "copper_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "copper_pickaxe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "copper_shovel": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "copper_spear": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "copper_sword": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "copper_torch": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "copper_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cornflower": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cow_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "cracked_deepslate_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cracked_deepslate_tiles": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cracked_nether_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cracked_polished_blackstone_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cracked_stone_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crafter": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crafting_table": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "creaking_heart": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "creaking_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "creeper_charge_banner_pattern": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "creeper_head": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "creeper_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "crimson_button": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crimson_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crimson_fence": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crimson_fence_gate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crimson_fungus": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crimson_hanging_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "crimson_hyphae": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crimson_nylium": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crimson_planks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crimson_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crimson_roots": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crimson_shelf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crimson_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "crimson_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crimson_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crimson_stem": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crimson_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "crossbow": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "crying_obsidian": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cut_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cut_copper_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cut_copper_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cut_red_sandstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cut_red_sandstone_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cut_sandstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cut_sandstone_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cyan_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "cyan_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "cyan_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "cyan_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cyan_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cyan_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cyan_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cyan_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cyan_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cyan_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "cyan_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "cyan_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "cyan_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cyan_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cyan_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "cyan_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "damaged_anvil": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dandelion": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "danger_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_oak_boat": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "dark_oak_boat_with_chest": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "dark_oak_button": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_oak_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_oak_fence": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_oak_fence_gate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_oak_hanging_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "dark_oak_leaves": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_oak_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_oak_planks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_oak_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_oak_sapling": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_oak_shelf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_oak_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "dark_oak_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_oak_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_oak_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_oak_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_prismarine": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_prismarine_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dark_prismarine_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "daylight_detector": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_brain_coral": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_brain_coral_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_brain_coral_fan": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_bubble_coral": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_bubble_coral_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_bubble_coral_fan": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_bush": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_fire_coral": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_fire_coral_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_fire_coral_fan": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_horn_coral": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_horn_coral_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_horn_coral_fan": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_tube_coral": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_tube_coral_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dead_tube_coral_fan": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "debug_stick": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "decorated_pot": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "deepslate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_brick_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_brick_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_brick_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_coal_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_copper_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_diamond_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_emerald_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_gold_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_iron_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_lapis_lazuli_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_redstone_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_tile_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_tile_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_tile_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "deepslate_tiles": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "desert_village_map": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "detector_rail": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "diamond": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "diamond_axe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "diamond_boots": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "diamond_chestplate": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "diamond_helmet": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "diamond_hoe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "diamond_horse_armor": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "diamond_leggings": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "diamond_nautilus_armor": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "diamond_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "diamond_pickaxe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "diamond_shovel": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "diamond_spear": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "diamond_sword": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "diorite": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "diorite_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "diorite_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "diorite_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dirt": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dirt_path": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "disc_fragment": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dispenser": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dolphin_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "donkey_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "dragon_egg": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dragon_head": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dragon's_breath": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dried_ghast": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dried_kelp": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dried_kelp_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dripstone_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "dropper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "drowned_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "dune_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "echo_shard": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "egg": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "elder_guardian_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "elytra": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "emerald": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "emerald_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "empty_map": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "enchanted_book___aqua_affinity": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___bane_of_arthropods_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___bane_of_arthropods_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___bane_of_arthropods_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___bane_of_arthropods_iv": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___bane_of_arthropods_v": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___blast_protection_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___blast_protection_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___blast_protection_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___blast_protection_iv": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___breach_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___breach_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___breach_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___breach_iv": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___channeling": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___curse_of_binding": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___curse_of_vanishing": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___density_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___density_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___density_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___density_iv": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___density_v": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___depth_strider_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___depth_strider_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___depth_strider_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___efficiency_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___efficiency_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___efficiency_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___efficiency_iv": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___efficiency_v": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___feather_falling_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___feather_falling_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___feather_falling_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___feather_falling_iv": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___fire_aspect_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___fire_aspect_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___fire_protection_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___fire_protection_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___fire_protection_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___fire_protection_iv": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___flame": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___fortune_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___fortune_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___fortune_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___frost_walker_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___frost_walker_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___impaling_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___impaling_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___impaling_iv": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___impaling_v": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___infinity": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___knockback_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___knockback_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___looting_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___looting_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___looting_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___loyalty_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___loyalty_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___loyalty_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___luck_of_the_sea_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___luck_of_the_sea_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___luck_of_the_sea_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___lunge_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___lunge_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___lunge_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___lure_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___lure_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___lure_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___mending": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___multishot": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___piercing_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___piercing_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___piercing_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___piercing_iv": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___power_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___power_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___power_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___power_iv": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___power_v": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___projectile_protection_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___projectile_protection_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___projectile_protection_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___projectile_protection_iv": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___protection_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___protection_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___protection_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___protection_iv": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___punch_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___punch_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___quick_charge_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___quick_charge_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___quick_charge_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___respiration_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___respiration_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___respiration_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___riptide_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___riptide_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___riptide_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___sharpness_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___sharpness_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___sharpness_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___sharpness_iv": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___sharpness_v": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___silk_touch": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___smite_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___smite_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___smite_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___smite_iv": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___smite_v": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___soul_speed_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___soul_speed_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___soul_speed_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___sweeping_edge_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___sweeping_edge_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___sweeping_edge_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___swift_sneak_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___swift_sneak_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___swift_sneak_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___thorns_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___thorns_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___thorns_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___unbreaking_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___unbreaking_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___unbreaking_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___wind_burst_i": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___wind_burst_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_book___wind_burst_iii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "enchanted_golden_apple": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "enchanting_table": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "end_crystal": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "end_portal_frame": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "end_rod": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "end_stone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "end_stone_brick_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "end_stone_brick_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "end_stone_brick_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "end_stone_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ender_chest": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ender_dragon_spawn_egg": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ender_pearl": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "enderman_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "endermite_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "evoker_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "explorer_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_chiseled_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_copper_bars": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_copper_bulb": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_copper_chain": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_copper_chest": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_copper_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_copper_golem_statue": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_copper_grate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_copper_lantern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_copper_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_cut_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_cut_copper_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_cut_copper_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "exposed_lightning_rod": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "eye_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "eye_of_ender": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "farmland": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "feather": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "fermented_spider_eye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "fern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "field_masoned_banner_pattern": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "fire_charge": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "fire_coral": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "fire_coral_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "fire_coral_fan": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "firefly_bush": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "firework_rocket___flight_duration:_<1_3>_<firework_star_info>": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "firework_star": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "firework_star___<shape>_<colors>_<effects>": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "fishing_rod": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "fletching_table": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "flint": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "flint_and_steel": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "flow_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "flow_banner_pattern": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "flow_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "flower_charge_banner_pattern": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "flower_pot": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "flowering_azalea": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "flowering_azalea_leaves": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "fox_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "friend_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "frog_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "furnace": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ghast_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "ghast_tear": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "gilded_blackstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "glass_bottle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "glistering_melon_slice": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "globe_banner_pattern": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "glow_berries": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "glow_ink_sac": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "glow_item_frame": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "glow_lichen": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "glow_squid_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "glowstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "glowstone_dust": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "goat_horn___admire": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "goat_horn___call": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "goat_horn___dream": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "goat_horn___feel": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "goat_horn___ponder": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "goat_horn___seek": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "goat_horn___sing": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "goat_horn___yearn": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "goat_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "gold_ingot": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "gold_nugget": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "gold_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "golden_apple": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "golden_axe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "golden_boots": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "golden_carrot": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "golden_chestplate": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "golden_dandelion": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "golden_helmet": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "golden_hoe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "golden_horse_armor": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "golden_leggings": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "golden_nautilus_armor": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "golden_pickaxe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "golden_shovel": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "golden_spear": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "golden_sword": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "granite": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "granite_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "granite_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "granite_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "grass_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "gravel": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "gray_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "gray_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "gray_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "gray_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "gray_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "gray_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "gray_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "gray_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "gray_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "gray_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "gray_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "gray_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "gray_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "gray_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "gray_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "gray_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "green_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "green_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "green_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "green_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "green_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "green_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "green_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "green_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "green_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "green_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "green_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "green_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "green_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "green_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "green_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "green_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "grindstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "guardian_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "gunpowder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "guster_banner_pattern": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "guster_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "hanging_roots": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "happy_ghast_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "hay_bale": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "heart_of_the_sea": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "heart_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "heartbreak_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "heavy_core": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "heavy_weighted_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "hoglin_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "honey_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "honey_bottle": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "honeycomb": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "honeycomb_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "hopper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "horn_coral": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "horn_coral_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "horn_coral_fan": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "horse_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "host_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "howl_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "husk_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "ice": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "infested_chisled_stone_bricks": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "infested_cobblestone": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "infested_cracked_stone_bricks": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "infested_deepslate": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "infested_mossy_stone_bricks": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "infested_stone": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "infested_stone_bricks": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "ink_sac": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "iron_axe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "iron_bars": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "iron_boots": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "iron_chestplate": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "iron_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "iron_golem_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "iron_helmet": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "iron_hoe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "iron_horse_armor": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "iron_ingot": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "iron_leggings": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "iron_nautilus_armor": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "iron_nugget": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "iron_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "iron_pickaxe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "iron_shovel": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "iron_spear": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "iron_sword": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "iron_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "item_frame": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jack_o'lantern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jigsaw_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jukebox": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_boat": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "jungle_boat_with_chest": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "jungle_button": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_explorer_map": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_fence": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_fence_gate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_hanging_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "jungle_leaves": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_planks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_sapling": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_shelf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "jungle_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "jungle_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "kelp": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "knowledge_book": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "ladder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lantern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lapis_lazuli": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lapis_lazuli_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "large_amethyst_bud": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "large_fern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lava_bucket": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lead": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "leaf_litter": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "leather": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "leather_boots": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "leather_cap": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "leather_horse_armor": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "leather_pants": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "leather_tunic": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lectern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lever": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_blue_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "light_blue_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "light_blue_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "light_blue_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_blue_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_blue_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_blue_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_blue_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_blue_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_blue_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "light_blue_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "light_blue_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "light_blue_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_blue_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_blue_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_blue_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_gray_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "light_gray_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "light_gray_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "light_gray_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_gray_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_gray_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_gray_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_gray_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_gray_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_gray_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "light_gray_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "light_gray_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "light_gray_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_gray_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_gray_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_gray_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "light_weighted_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lightning_rod": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lilac": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lily_of_the_valley": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lily_pad": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lime_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "lime_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lime_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lime_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lime_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lime_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lime_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lime_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lime_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lime_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lime_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lime_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lime_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lime_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lime_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lime_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lingering_potion_of_fire_resistance___fire_resistance_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_fire_resistance___fire_resistance_2:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_harming___instant_damage": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_harming___instant_damage_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_healing___instant_health": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_healing___instant_health_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_infestation___infested_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_invisibility___invisibility_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_invisibility___invisibility_2:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_leaping___jump_boost_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_leaping___jump_boost_2:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_leaping___jump_boost_ii_0:22": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_luck___luck_1:15": {
+    "creative_only": true,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_night_vision___night_vision_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_night_vision___night_vision_2:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_oozing___oozing_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_poison___poison_0:11": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_poison___poison_0:22": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_poison___poison_ii_0:05": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_regeneration___regeneration_0:11": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_regeneration___regeneration_0:22": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_regeneration___regeneration_ii_0:05": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_slow_falling___slow_falling_0:22": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_slow_falling___slow_falling_1:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_slowness___slowness_0:22": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_slowness___slowness_1:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_slowness___slowness_iv_0:05": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_strength___strength_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_strength___strength_2:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_strength___strength_ii_0:23": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_swiftness___speed_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_swiftness___speed_2:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_swiftness___speed_ii_0:22": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_the_turtle_master___..._iv_..._iii_0:05": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_the_turtle_master___..._iv_..._iii_0:10": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_the_turtle_master___..._vi_..._iv_0:05": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_water_breathing___water_breathing_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_water_breathing___water_breathing_2:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_weakness___weakness_0:22": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_weakness___weakness_1:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_weaving___weaving_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_potion_of_wind_charging___wind_charged_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "lingering_water_bottle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "llama_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "lodestone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "lodestone_compass": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "loom": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mace": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "magenta_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "magenta_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "magenta_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "magenta_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "magenta_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "magenta_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "magenta_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "magenta_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "magenta_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "magenta_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "magenta_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "magenta_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "magenta_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "magenta_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "magenta_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "magenta_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "magma_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "magma_cream": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "magma_cube_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "mangrove_boat": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "mangrove_boat_with_chest": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "mangrove_button": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mangrove_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mangrove_fence": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mangrove_fence_gate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mangrove_hanging_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "mangrove_leaves": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mangrove_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mangrove_planks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mangrove_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mangrove_propagule": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mangrove_roots": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mangrove_shelf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mangrove_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "mangrove_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mangrove_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mangrove_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mangrove_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "map": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "medium_amethyst_bud": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "melon": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "melon_seeds": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "melon_slice": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "milk_bucket": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "minecart": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "minecart_with_chest": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "minecart_with_command_block": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "minecart_with_furnace\u200c": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "minecart_with_hopper": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "minecart_with_tnt": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "miner_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "monster_spawner": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "mooshroom_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "moss_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "moss_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mossy_cobblestone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mossy_cobblestone_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mossy_cobblestone_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mossy_cobblestone_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mossy_stone_brick_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mossy_stone_brick_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mossy_stone_brick_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mossy_stone_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mourner_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mud": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mud_brick_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mud_brick_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mud_brick_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mud_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "muddy_mangrove_roots": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mule_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "mundane_lingering_potion": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "mundane_potion": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "mundane_splash_potion": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "mushroom_stem": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "mushroom_stew": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___aaron_cherof___precipice": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___aaron_cherof___relic": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___amos_roddy___tears": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___c418___11": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___c418___13": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___c418___blocks": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___c418___cat": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___c418___chirp": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___c418___far": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___c418___mall": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___c418___mellohi": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___c418___stal": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___c418___strad": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___c418___wait": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___c418___ward": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___fingerspit___bounce": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___hyper_potions___lava_chicken": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___lena_raine___creator": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___lena_raine___creator_music_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___lena_raine___otherside": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___lena_raine___pigstep": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "music_disc___samuel_\u00e5berg___5": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "mycelium": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "name_tag": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "nautilus_shell": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "nautilus_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "nether_brick": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "nether_brick_fence": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "nether_brick_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "nether_brick_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "nether_brick_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "nether_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "nether_gold_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "nether_quartz": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "nether_quartz_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "nether_sprouts": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "nether_star": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "nether_wart": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "nether_wart_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "netherite_axe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "netherite_boots": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "netherite_chestplate": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "netherite_helmet": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "netherite_hoe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "netherite_horse_armor": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "netherite_ingot": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "netherite_leggings": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "netherite_nautilus_armor": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "netherite_pickaxe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "netherite_scrap": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "netherite_shovel": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "netherite_spear": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "netherite_sword": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "netherite_upgrade": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "netherrack": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "note_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oak_boat": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "oak_boat_with_chest": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "oak_button": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oak_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oak_fence": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oak_fence_gate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oak_hanging_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "oak_leaves": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oak_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oak_planks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oak_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oak_sapling": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oak_shelf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oak_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "oak_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oak_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oak_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oak_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "observer": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "obsidian": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ocean_explorer_map": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ocelot_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "ochre_froglight": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ominous_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "ominous_bottle___bad_omen_01:40:00": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ominous_bottle___bad_omen_ii_01:40:00": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ominous_bottle___bad_omen_iii_01:40:00": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ominous_bottle___bad_omen_iv_01:40:00": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ominous_bottle___bad_omen_v_01:40:00": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ominous_trial_key": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ominous_trial_spawner": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ominous_vault": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "open_eyeblossom": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "orange_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "orange_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "orange_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "orange_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "orange_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "orange_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "orange_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "orange_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "orange_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "orange_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "orange_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "orange_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "orange_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "orange_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "orange_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "orange_tulip": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "orange_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxeye_daisy": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_chiseled_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_copper_bars": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_copper_bulb": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_copper_chain": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_copper_chest": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_copper_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_copper_golem_statue": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_copper_grate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_copper_lantern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_copper_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_cut_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_cut_copper_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_cut_copper_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "oxidized_lightning_rod": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "packed_ice": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "packed_mud": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "painting": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_hanging_moss": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_moss_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_moss_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_boat": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "pale_oak_boat_with_chest": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "pale_oak_button": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_fence": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_fence_gate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_hanging_sign": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_leaves": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_planks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_sapling": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_shelf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_sign": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pale_oak_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "panda_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "paper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "parched_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "parrot_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "pearlescent_froglight": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "peony": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "petrified_oak_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "phantom_membrane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "phantom_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "pig_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "piglin_brute_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "piglin_head": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "piglin_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "pillager_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "pink_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "pink_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "pink_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "pink_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pink_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pink_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pink_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pink_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pink_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pink_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "pink_petals": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pink_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "pink_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "pink_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pink_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pink_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pink_tulip": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pink_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "piston": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pitcher_plant": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pitcher_pod": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "plains_village_map": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "player_head": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "plenty_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "podzol": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pointed_dripstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "poisonous_potato": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polar_bear_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "polished_andesite": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_andesite_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_andesite_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_basalt": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_blackstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_blackstone_brick_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_blackstone_brick_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_blackstone_brick_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_blackstone_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_blackstone_button": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_blackstone_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_blackstone_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_blackstone_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_blackstone_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_cinnabar": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_cinnabar_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_cinnabar_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_cinnabar_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_deepslate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_deepslate_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_deepslate_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_deepslate_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_diorite": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_diorite_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_diorite_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_granite": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_granite_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_granite_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_sulfur": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_sulfur_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_sulfur_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_sulfur_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_tuff": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_tuff_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_tuff_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "polished_tuff_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "popped_chorus_fruit": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "poppy": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "potato": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "potent_sulfur": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "potion_of_fire_resistance___fire_resistance_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_fire_resistance___fire_resistance_8:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_harming___instant_damage": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_harming___instant_damage_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_healing___instant_health": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_healing___instant_health_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_infestation___infested_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_invisibility___invisibility_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_invisibility___invisibility_8:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_leaping___jump_boost_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_leaping___jump_boost_8:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_leaping___jump_boost_ii_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_luck___luck_5:00": {
+    "creative_only": true,
+    "stack_amount": 1
+  },
+  "potion_of_night_vision___night_vision_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_night_vision___night_vision_8:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_oozing___oozing_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_poison___poison_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_poison___poison_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_poison___poison_ii_0:21": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_regeneration___regeneration_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_regeneration___regeneration_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_regeneration___regeneration_ii_0:22": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_slow_falling___slow_falling_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_slow_falling___slow_falling_4:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_slowness___slowness_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_slowness___slowness_4:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_slowness___slowness_iv_0:20": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_strength___strength_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_strength___strength_8:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_strength___strength_ii_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_swiftness___speed_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_swiftness___speed_8:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_swiftness___speed_ii_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_the_turtle_master___..._iv_..._iii_0:20": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_the_turtle_master___..._iv_..._iii_0:40": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_the_turtle_master___..._vi_..._iv_0:20": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_water_breathing___water_breathing_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_water_breathing___water_breathing_8:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_weakness___weakness_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_weakness___weakness_4:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_weaving___weaving_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "potion_of_wind_charging___wind_charged_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "powder_snow_bucket": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "powered_rail": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "prismarine": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "prismarine_brick_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "prismarine_brick_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "prismarine_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "prismarine_crystals": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "prismarine_shard": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "prismarine_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "prismarine_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "prismarine_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "prize_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pufferfish": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pufferfish_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "pumpkin": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pumpkin_pie": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "pumpkin_seeds": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "purple_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "purple_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "purple_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "purple_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "purple_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "purple_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "purple_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "purple_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "purple_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "purple_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "purple_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "purple_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "purple_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "purple_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "purple_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "purple_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "purpur_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "purpur_pillar": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "purpur_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "purpur_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "quartz_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "quartz_pillar": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "quartz_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "quartz_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "rabbit_hide": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "rabbit_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "rabbit_stew": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "rabbit's_foot": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "rail": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "raiser_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "ravager_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "raw_beef": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "raw_chicken": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "raw_cod": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "raw_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "raw_gold": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "raw_iron": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "raw_mutton": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "raw_porkchop": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "raw_rabbit": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "raw_salmon": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "recovery_compass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "red_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "red_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "red_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "red_mushroom": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_mushroom_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_nether_brick_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_nether_brick_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_nether_brick_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_nether_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_sand": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_sandstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_sandstone_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_sandstone_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_sandstone_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "red_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "red_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_tulip": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "red_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "redstone_comparator": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "redstone_dust": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "redstone_lamp": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "redstone_ore": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "redstone_repeater": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "redstone_torch": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "reinforced_deepslate": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "repeating_command_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "resin_brick": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "resin_brick_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "resin_brick_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "resin_brick_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "resin_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "resin_clump": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "respawn_anchor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "rib_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "rooted_dirt": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "rose_bush": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "rotten_flesh": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "saddle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "salmon_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "sand": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sandstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sandstone_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sandstone_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sandstone_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "savanna_village_map": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "scaffolding": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "scrape_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sculk": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sculk_catalyst": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sculk_sensor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sculk_shrieker": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sculk_vein": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sea_lantern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sea_pickle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "seagrass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sentry_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "shaper_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sheaf_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "shears": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "sheep_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "shelter_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "short_dry_grass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "short_grass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "shroomlight": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "shulker_shell": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "shulker_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "silence_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "silverfish_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "skeleton_horse_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "skeleton_skull": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "skeleton_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "skull_charge_banner_pattern": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "skull_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "slime_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "slime_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "slimeball": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "small_amethyst_bud": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "small_dripleaf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "smithing_table": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "smoker": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "smooth_basalt": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "smooth_quartz_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "smooth_quartz_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "smooth_quartz_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "smooth_red_sandstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "smooth_red_sandstone_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "smooth_red_sandstone_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "smooth_sandstone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "smooth_sandstone_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "smooth_sandstone_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "smooth_stone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "smooth_stone_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sniffer_egg": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sniffer_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "snort_pottery_sherd": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "snout_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "snout_banner_pattern": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "snow": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "snow_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "snow_golem_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "snowball": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "snowy_village_map": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "soul_campfire": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "soul_lantern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "soul_sand": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "soul_soil": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "soul_torch": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spectral_arrow\u200c": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spider_eye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spider_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "spire_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "splash_potion_of_fire_resistance___fire_resistance_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_fire_resistance___fire_resistance_8:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_harming___instant_damage": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_harming___instant_damage_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_healing___instant_health": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_healing___instant_health_ii": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_infestation___infested_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_invisibility___invisibility_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_invisibility___invisibility_8:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_leaping___jump_boost_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_leaping___jump_boost_8:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_leaping___jump_boost_ii_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_luck___luck_5:00": {
+    "creative_only": true,
+    "stack_amount": 1
+  },
+  "splash_potion_of_night_vision___night_vision_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_night_vision___night_vision_8:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_oozing___oozing_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_poison___poison_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_poison___poison_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_poison___poison_ii_0:21": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_regeneration___regeneration_0:45": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_regeneration___regeneration_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_regeneration___regeneration_ii_0:22": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_slow_falling___slow_falling_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_slow_falling___slow_falling_4:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_slowness___slowness_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_slowness___slowness_4:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_slowness___slowness_iv_0:20": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_strength___strength_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_strength___strength_8:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_strength___strength_ii_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_swiftness___speed_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_swiftness___speed_8:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_swiftness___speed_ii_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_the_turtle_master___..._iv_..._iii_0:20": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_the_turtle_master___..._iv_..._iii_0:40": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_the_turtle_master___..._vi_..._iv_0:20": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_water_breathing___water_breathing_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_water_breathing___water_breathing_8:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_weakness___weakness_1:30": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_weakness___weakness_4:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_weaving___weaving_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_potion_of_wind_charging___wind_charged_3:00": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "splash_water_bottle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "sponge": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spore_blossom": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spruce_boat": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "spruce_boat_with_chest": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "spruce_button": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spruce_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spruce_fence": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spruce_fence_gate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spruce_hanging_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "spruce_leaves": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spruce_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spruce_planks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spruce_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spruce_sapling": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spruce_shelf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spruce_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "spruce_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spruce_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spruce_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spruce_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "spyglass": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "squid_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "steak": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stick": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sticky_piston": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stone": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stone_axe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "stone_brick_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stone_brick_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stone_brick_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stone_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stone_button": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stone_hoe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "stone_pickaxe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "stone_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stone_shovel": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "stone_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stone_spear": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "stone_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stone_sword": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "stonecutter": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stray_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "strider_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "string": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_acacia_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_acacia_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_birch_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_birch_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_cherry_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_cherry_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_crimson_hyphae": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_crimson_stem": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_dark_oak_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_dark_oak_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_jungle_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_jungle_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_mangrove_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_mangrove_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_oak_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_oak_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_pale_oak_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_pale_oak_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_spruce_log": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_spruce_wood": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_warped_hyphae": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "stripped_warped_stem": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "structure_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "structure_void": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sugar": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sugar_cane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sulfur": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sulfur_brick_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sulfur_brick_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sulfur_brick_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sulfur_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sulfur_cube_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "sulfur_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sulfur_spike": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sulfur_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sulfur_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sunflower": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "suspicious_gravel": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "suspicious_sand": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "suspicious_stew": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "swamp_explorer_map": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "sweet_berries": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tadpole_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "taiga_village_map": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tall_dry_grass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tall_grass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "target": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "test_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "test_instance_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "thick_lingering_potion": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "thick_potion": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "thick_splash_potion": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "thing_banner_pattern": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "tide_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tinted_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tipped_arrow": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tnt": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "torch": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "torchflower": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "torchflower_seeds": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "totem_of_undying": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "trader_llama_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "trapped_chest": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "trial_explorer_map": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "trial_key": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "trial_spawner": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "trident": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "tripwire_hook": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tropical_fish": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tropical_fish_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "tube_coral": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tube_coral_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tube_coral_fan": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tuff": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tuff_brick_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tuff_brick_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tuff_brick_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tuff_bricks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tuff_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tuff_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "tuff_wall": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "turtle_egg": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "turtle_scute": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "turtle_shell": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "turtle_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "twisting_vines": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "uncraftable_lingering_potion": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "uncraftable_potion": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "uncraftable_splash_potion": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "uncraftable_tipped_arrow": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "vault": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "verdant_froglight": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "vex_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "vex_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "villager_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "vindicator_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "vines": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "wandering_trader_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "ward_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warden_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "warped_button": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_fence": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_fence_gate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_fungus": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_fungus_on_a_stick": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "warped_hanging_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "warped_hyphae": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_nylium": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_planks": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_pressure_plate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_roots": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_shelf": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_sign": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "warped_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_stem": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "warped_wart_block": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "water_bottle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "water_bucket": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "waxed_block_of_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_chiseled_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_copper_bars": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_copper_bulb": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_copper_chain": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_copper_chest": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_copper_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_copper_golem_statue": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_copper_grate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_copper_lantern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_copper_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_cut_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_cut_copper_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_cut_copper_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_chiseled_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_copper_bars": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_copper_bulb": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_copper_chain": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_copper_chest": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_copper_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_copper_golem_statue": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_copper_grate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_copper_lantern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_copper_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_cut_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_cut_copper_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_cut_copper_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_exposed_lightning_rod": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_lightning_rod": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_chiseled_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_copper_bars": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_copper_bulb": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_copper_chain": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_copper_chest": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_copper_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_copper_golem_statue": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_copper_grate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_copper_lantern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_copper_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_cut_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_cut_copper_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_cut_copper_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_oxidized_lightning_rod": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_chiseled_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_copper_bars": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_copper_bulb": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_copper_chain": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_copper_chest": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_copper_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_copper_golem_statue": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_copper_grate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_copper_lantern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_copper_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_cut_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_cut_copper_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_cut_copper_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "waxed_weathered_lightning_rod": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "wayfinder_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_chiseled_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_copper_bars": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_copper_bulb": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_copper_chain": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_copper_chest": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_copper_door": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_copper_golem_statue": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_copper_grate": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_copper_lantern": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_copper_trapdoor": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_cut_copper": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_cut_copper_slab": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_cut_copper_stairs": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weathered_lightning_rod": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "weeping_vines": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "wet_sponge": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "wheat": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "wheat_seeds": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "white_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "white_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "white_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "white_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "white_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "white_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "white_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "white_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "white_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "white_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "white_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "white_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "white_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "white_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "white_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "white_tulip": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "white_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "wild_armor_trim": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "wildflowers": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "wind_charge": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "witch_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "wither_rose": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "wither_skeleton_skull": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "wither_skeleton_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "wither_spawn_egg": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "wolf_armor": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "wolf_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "wooden_axe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "wooden_hoe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "wooden_pickaxe": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "wooden_shovel": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "wooden_spear": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "wooden_sword": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "woodland_explorer_map": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "written_book": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "yellow_banner": {
+    "creative_only": false,
+    "stack_amount": 16
+  },
+  "yellow_bed": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "yellow_bundle": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "yellow_candle": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "yellow_carpet": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "yellow_concrete": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "yellow_concrete_powder": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "yellow_dye": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "yellow_glazed_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "yellow_harness": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "yellow_shield": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "yellow_shulker_box": {
+    "creative_only": false,
+    "stack_amount": 1
+  },
+  "yellow_stained_glass": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "yellow_stained_glass_pane": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "yellow_terracotta": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "yellow_wool": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "zoglin_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "zombie_head": {
+    "creative_only": false,
+    "stack_amount": 64
+  },
+  "zombie_horse_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "zombie_nautilus_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "zombie_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "zombie_villager_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  },
+  "zombified_piglin_spawn_egg": {
+    "creative_only": true,
+    "stack_amount": 64
+  }
+}

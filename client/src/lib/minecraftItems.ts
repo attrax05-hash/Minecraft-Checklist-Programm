@@ -2,13 +2,19 @@
 
 import imageMapping from './imageMapping.json';
 import imageUrlMapping from './imageUrlMapping.json';
+import englishNamesMapping from './englishNamesMapping.json';
+import itemMetadata from './itemMetadata.json';
 
 export interface MinecraftItem {
   id: string;
-  name: string;
-  category: 'ore' | 'ingot' | 'block' | 'tool' | 'weapon' | 'armor' | 'food' | 'material' | 'decoration' | 'other';
+  name: string; // Deutscher Name
+  englishName?: string; // Englischer Name
+  category: 'ore' | 'ingot' | 'block' | 'tool' | 'weapon' | 'armor' | 'food' | 'material' | 'decoration' | 'redstone' | 'other';
   imageId: string; // ID für die Bildsuche
   imageUrl?: string; // Direkte URL zum Bild
+  creativeOnly?: boolean; // Nur im Creative Mode verfügbar
+  survivalOnly?: boolean; // Nur im Survival Mode verfügbar
+  stackAmount?: number; // Maximale Stack-Größe
 }
 
 // Erstelle Items aus dem Image-Mapping
@@ -26,7 +32,10 @@ const createItemsFromMapping = (): MinecraftItem[] => {
     if (id.includes('apple') || id.includes('bread') || id.includes('beef') || id.includes('pork') || 
         id.includes('chicken') || id.includes('fish') || id.includes('carrot') || id.includes('potato') ||
         id.includes('melon') || id.includes('pumpkin') || id.includes('cake') || id.includes('cookie') ||
-        id.includes('milk') || id.includes('egg')) return 'food';
+        id.includes('milk') || id.includes('egg') || id.includes('steak') || id.includes('cooked')) return 'food';
+    if (id.includes('redstone') || id.includes('repeater') || id.includes('comparator') || 
+        id.includes('piston') || id.includes('dispenser') || id.includes('hopper') ||
+        id.includes('observer') || id.includes('target')) return 'redstone';
     if (id.includes('crafting_table') || id.includes('furnace') || id.includes('enchanting') || 
         id.includes('anvil') || id.includes('brewing') || id.includes('cauldron') ||
         id.includes('torch') || id.includes('lantern') || id.includes('candle') || id.includes('bed') ||
@@ -44,12 +53,19 @@ const createItemsFromMapping = (): MinecraftItem[] => {
   // Erstelle Items aus dem Mapping
   Object.entries(imageMapping).forEach(([imageId, germanName]) => {
     const imageUrl = (imageUrlMapping as Record<string, string>)[imageId];
+    const englishName = (englishNamesMapping as Record<string, string>)[imageId];
+    const metadata = (itemMetadata as Record<string, any>)[imageId] || {};
+    
     items.push({
       id: imageId,
       name: germanName as string,
+      englishName: englishName,
       category: categorizeItem(imageId),
       imageId: imageId,
       imageUrl: imageUrl || `/manus-storage/${imageId}.png`,
+      creativeOnly: metadata.creative_only || false,
+      survivalOnly: !metadata.creative_only && metadata.creative_only !== undefined,
+      stackAmount: metadata.stack_amount || 64,
     });
   });
 
@@ -69,6 +85,7 @@ export function searchItems(query: string): MinecraftItem[] {
   return minecraftItems.filter(
     (item) =>
       item.name.toLowerCase().includes(lowerQuery) ||
+      item.englishName?.toLowerCase().includes(lowerQuery) ||
       item.id.toLowerCase().includes(lowerQuery)
   );
 }
