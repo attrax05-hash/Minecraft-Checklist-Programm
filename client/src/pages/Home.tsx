@@ -480,20 +480,65 @@ export default function Home() {
                       {item.name}
                     </p>
                     <div className="flex items-center gap-2 mt-2">
-                      <Input
-                        type="number"
-                        value={item.stacks * STACK_SIZE + item.items}
-                        onChange={(e) => {
-                          const total = Math.max(1, parseInt(e.target.value) || 1);
-                          const newStacks = Math.floor(total / STACK_SIZE);
-                          const newItems = total % STACK_SIZE || 1;
-                          setChecklist(checklist.map((i) => i.id === item.id ? { ...i, stacks: newStacks, items: newItems } : i));
-                        }}
-                        className="w-20 h-8 text-center border-2 border-[#4CAF50] bg-[#2a2a2a] text-white text-sm"
-                      />
-                      <p className="text-sm text-[#b0b0b0]">
-                        ({item.stacks > 0 && `${item.stacks}S + `}{item.items})
-                      </p>
+                      <div className="flex items-center gap-1">
+                        <Button
+                          onClick={() => setChecklist(checklist.map((i) => i.id === item.id ? { ...i, stacks: Math.max(0, i.stacks - 1) } : i))}
+                          className="h-6 w-6 p-0 bg-[#4CAF50]/50 hover:bg-[#4CAF50] text-xs"
+                        >
+                          −
+                        </Button>
+                        <Input
+                          type="number"
+                          value={item.stacks}
+                          onChange={(e) => setChecklist(checklist.map((i) => i.id === item.id ? { ...i, stacks: Math.max(0, parseInt(e.target.value) || 0) } : i))}
+                          className="w-12 h-6 text-center border-2 border-[#4CAF50] bg-[#2a2a2a] text-white text-xs"
+                        />
+                        <Button
+                          onClick={() => setChecklist(checklist.map((i) => i.id === item.id ? { ...i, stacks: i.stacks + 1 } : i))}
+                          className="h-6 w-6 p-0 bg-[#4CAF50]/50 hover:bg-[#4CAF50] text-xs"
+                        >
+                          +
+                        </Button>
+                      </div>
+                      <p className="text-xs text-[#b0b0b0]">Stacks</p>
+                      <div className="flex items-center gap-1">
+                        <Button
+                          onClick={() => {
+                            const newItems = item.items - 1;
+                            if (newItems < 1) {
+                              setChecklist(checklist.map((i) => i.id === item.id ? { ...i, stacks: Math.max(0, i.stacks - 1), items: STACK_SIZE } : i));
+                            } else {
+                              setChecklist(checklist.map((i) => i.id === item.id ? { ...i, items: newItems } : i));
+                            }
+                          }}
+                          className="h-6 w-6 p-0 bg-[#4CAF50]/50 hover:bg-[#4CAF50] text-xs"
+                        >
+                          −
+                        </Button>
+                        <Input
+                          type="number"
+                          value={item.items}
+                          onChange={(e) => {
+                            const val = Math.max(1, Math.min(STACK_SIZE, parseInt(e.target.value) || 1));
+                            setChecklist(checklist.map((i) => i.id === item.id ? { ...i, items: val } : i));
+                          }}
+                          className="w-12 h-6 text-center border-2 border-[#4CAF50] bg-[#2a2a2a] text-white text-xs"
+                        />
+                        <Button
+                          onClick={() => {
+                            const newItems = item.items + 1;
+                            if (newItems > STACK_SIZE) {
+                              setChecklist(checklist.map((i) => i.id === item.id ? { ...i, stacks: i.stacks + 1, items: 1 } : i));
+                            } else {
+                              setChecklist(checklist.map((i) => i.id === item.id ? { ...i, items: newItems } : i));
+                            }
+                          }}
+                          className="h-6 w-6 p-0 bg-[#4CAF50]/50 hover:bg-[#4CAF50] text-xs"
+                        >
+                          +
+                        </Button>
+                      </div>
+                      <p className="text-xs text-[#b0b0b0]">Items</p>
                     </div>
                   </div>
                   <Button

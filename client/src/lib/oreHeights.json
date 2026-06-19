@@ -1,0 +1,21 @@
+{
+  "coal_ore": "Y: 0 - 256 (Best: Y: 95)",
+  "copper_ore": "Y: -16 - 112 (Best: Y: 48)",
+  "diamond_ore": "Y: -64 - 16 (Best: Y: -59)",
+  "emerald_ore": "Y: -16 - 320 (Best: Y: 256)",
+  "gold_ore": "Y: -64 - 32 (Best: Y: -16)",
+  "iron_ore": "Y: -64 - 72 (Best: Y: 72)",
+  "lapis_ore": "Y: -32 - 32 (Best: Y: 0)",
+  "redstone_ore": "Y: -64 - -15 (Best: Y: -59)",
+  "deepslate_coal_ore": "Y: -64 - 0 (Best: Y: -32)",
+  "deepslate_copper_ore": "Y: -64 - 0 (Best: Y: -32)",
+  "deepslate_diamond_ore": "Y: -64 - -16 (Best: Y: -59)",
+  "deepslate_emerald_ore": "Y: -64 - 0 (Best: Y: -32)",
+  "deepslate_gold_ore": "Y: -64 - 0 (Best: Y: -32)",
+  "deepslate_iron_ore": "Y: -64 - 0 (Best: Y: -32)",
+  "deepslate_lapis_ore": "Y: -64 - 0 (Best: Y: -32)",
+  "deepslate_redstone_ore": "Y: -64 - -15 (Best: Y: -59)",
+  "nether_gold_ore": "Y: 0 - 128 (Best: Y: 64)",
+  "nether_quartz_ore": "Y: 10 - 117 (Best: Y: 64)",
+  "ancient_debris": "Y: 8 - 119 (Best: Y: 15)"
+}
