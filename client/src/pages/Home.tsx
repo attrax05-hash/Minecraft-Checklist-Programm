@@ -182,9 +182,7 @@ export default function Home() {
                     src={item.imageUrl || getItemImageUrl(item.id)}
                     alt={item.name}
                     className="h-14 w-14 object-contain"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = 'none';
-                    }}
+                    style={{ minHeight: '56px', minWidth: '56px', backgroundColor: '#333' }}
                   />
                 </button>
               ))}
@@ -204,9 +202,7 @@ export default function Home() {
                     src={item.imageUrl || getItemImageUrl(item.id)}
                     alt={item.name}
                     className="h-8 w-8 object-contain"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = 'none';
-                    }}
+                    style={{ minHeight: '32px', minWidth: '32px', backgroundColor: '#333' }}
                   />
                   <span className="text-[#4CAF50]">{item.name}</span>
                 </button>
@@ -218,14 +214,12 @@ export default function Home() {
           {selectedItem && (
             <div className="mt-6 p-4 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded">
               <div className="flex items-center gap-3 mb-4">
-                <img
-                  src={selectedItem.imageUrl || getItemImageUrl(selectedItem.id)}
-                  alt={selectedItem.name}
-                  className="h-12 w-12 object-contain"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                  }}
-                />
+                  <img
+                    src={selectedItem.imageUrl || getItemImageUrl(selectedItem.id)}
+                    alt={selectedItem.name}
+                    className="h-12 w-12 object-contain"
+                    style={{ minHeight: '48px', minWidth: '48px', backgroundColor: '#333' }}
+                  />
                 <div>
                   <h3 className="text-lg font-bold text-[#4CAF50]">{selectedItem.name}</h3>
                   <p className="text-sm text-[#b0b0b0]">{selectedItem.category}</p>
@@ -375,9 +369,7 @@ export default function Home() {
                       src={item.imageUrl || getItemImageUrl(item.itemId)}
                       alt={item.name}
                       className="h-8 w-8 object-contain"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).style.display = 'none';
-                      }}
+                      style={{ minHeight: '32px', minWidth: '32px', backgroundColor: '#333' }}
                     />
                     <div className="flex-1">
                       <p className={`font-bold ${item.checked ? 'line-through text-[#666]' : 'text-[#4CAF50]'}`}>
@@ -419,9 +411,7 @@ export default function Home() {
                     src={infoItem.imageUrl || getItemImageUrl(infoItem.id)}
                     alt={infoItem.name}
                     className="h-16 w-16 object-contain"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = 'none';
-                    }}
+                    style={{ minHeight: '64px', minWidth: '64px', backgroundColor: '#333' }}
                   />
                   <div>
                     <h2 className="text-2xl font-bold text-[#4CAF50]">{infoItem.name}</h2>
@@ -472,9 +462,7 @@ export default function Home() {
                                     src={getItemImageUrl(itemId)}
                                     alt={itemId}
                                     className="w-10 h-10 object-contain"
-                                    onError={(e) => {
-                                      (e.target as HTMLImageElement).style.display = 'none';
-                                    }}
+                                    style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }}
                                   />
                                 )}
                               </div>
@@ -487,9 +475,7 @@ export default function Home() {
                                 src={getItemImageUrl(details.recipeGrid.output)}
                                 alt={details.recipeGrid.output}
                                 className="w-12 h-12 object-contain mx-auto"
-                                onError={(e) => {
-                                  (e.target as HTMLImageElement).style.display = 'none';
-                                }}
+                                style={{ minHeight: '48px', minWidth: '48px', backgroundColor: '#333' }}
                               />
                               {details.recipeGrid.outputCount && details.recipeGrid.outputCount > 1 && (
                                 <p className="text-[#FFD700] text-xs font-bold">x{details.recipeGrid.outputCount}</p>
