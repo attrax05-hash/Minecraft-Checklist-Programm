@@ -1,11 +1,18 @@
 // Detaillierte Informationen zu Minecraft-Items
+export interface RecipeGrid {
+  inputs: string[]; // 9 Items (3x3 Grid)
+  output: string; // Output Item ID
+  outputCount?: number; // Anzahl des Outputs
+}
+
 export interface ItemDetails {
   id: string;
   name: string;
   location?: string; // Wo man es findet
   biomes?: string; // In welchen Biomen
   height?: string; // Höhe (Y-Koordinate)
-  recipe?: string; // Herstellungsrezept
+  recipe?: string; // Herstellungsrezept als Text
+  recipeGrid?: RecipeGrid; // Crafting-Rezept als strukturiertes Grid
   description?: string; // Allgemeine Beschreibung
   miningRequirement?: string; // Abbau-Anforderung (z.B. "Mindestens Eisenspitzhacke")
   recipeUrl?: string; // Link zu minecraft-craftings.com
@@ -65,6 +72,11 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
     biomes: 'Überall',
     height: 'Y: -64 bis -16 (Peak: Y: -59)',
     recipe: 'Abbau mit Diamantspitzhacke → Diamanterz → Ofen → Diamant',
+    recipeGrid: {
+      inputs: ['', '', '', '', '', '', '', '', ''],
+      output: 'diamond',
+      outputCount: 1
+    },
     description: 'Das wertvollste Erz, verwendet für beste Werkzeuge',
     miningRequirement: 'Mindestens Eisenspitzhacke erforderlich',
     recipeUrl: 'https://minecraft-craftings.com/#diamond'
@@ -76,6 +88,11 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
     biomes: 'Überall',
     height: 'Y: -64 bis -16',
     recipe: 'Abbau mit Diamantspitzhacke → Tiefenschiefer Diamanterz → Ofen → Diamant',
+    recipeGrid: {
+      inputs: ['', '', '', '', '', '', '', '', ''],
+      output: 'diamond',
+      outputCount: 1
+    },
     description: 'Tiefere Variante von Diamanterz',
     miningRequirement: 'Mindestens Eisenspitzhacke erforderlich',
     recipeUrl: 'https://minecraft-craftings.com/#diamond'
