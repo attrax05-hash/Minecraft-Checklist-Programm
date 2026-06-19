@@ -29,138 +29,25 @@ export default function Home() {
   const [items, setItems] = useState(1);
   const [checklist, setChecklist] = useState<ChecklistItem[]>([]);
   const [selectedItem, setSelectedItem] = useState<MinecraftItem | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [infoItem, setInfoItem] = useState<MinecraftItem | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Lade Checkliste aus localStorage beim Start
+  // Lade Checkliste aus localStorage
   useEffect(() => {
-    const savedChecklist = localStorage.getItem(STORAGE_KEY);
-    if (savedChecklist) {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
       try {
-        const parsed = JSON.parse(savedChecklist);
-        setChecklist(parsed);
-      } catch (error) {
-        console.error('Fehler beim Laden der Checkliste:', error);
+        setChecklist(JSON.parse(saved));
+      } catch (e) {
+        console.error('Fehler beim Laden der Checkliste:', e);
       }
     }
-    setIsLoading(false);
   }, []);
 
-  // Speichere Checkliste in localStorage wenn sie sich ändert
+  // Speichere Checkliste in localStorage
   useEffect(() => {
-    if (!isLoading) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(checklist));
-    }
-  }, [checklist, isLoading]);
-
-  const searchResults = searchQuery.trim() ? searchItems(searchQuery) : [];
-
-  const handleSelectItem = (item: MinecraftItem) => {
-    setSelectedItem(item);
-    setSearchQuery('');
-  };
-
-  const handleAddToChecklist = () => {
-    if (!selectedItem) return;
-
-    // Nur hinzufügen wenn mindestens Stacks oder Items > 0
-    if (stacks === 0 && items === 0) {
-      toast.error('Bitte geben Sie eine Menge ein');
-      return;
-    }
-
-    const newItem: ChecklistItem = {
-      ...selectedItem,
-      id: `${selectedItem.id}-${Date.now()}`,
-      itemId: selectedItem.id,
-      stacks,
-      items,
-      checked: false,
-    };
-
-    setChecklist([...checklist, newItem]);
-    toast.success(`${selectedItem.name} zur Liste hinzugefügt`);
-    setSelectedItem(null);
-    setStacks(0);
-    setItems(1);
-  };
-
-  const handleToggleItem = (id: string) => {
-    setChecklist(
-      checklist.map((item) =>
-        item.id === id ? { ...item, checked: !item.checked } : item
-      )
-    );
-  };
-
-  const handleRemoveItem = (id: string) => {
-    setChecklist(checklist.filter((item) => item.id !== id));
-    toast.success('Item entfernt');
-  };
-
-  const handleExportJSON = () => {
-    const dataStr = JSON.stringify(checklist, null, 2);
-    const dataBlob = new Blob([dataStr], { type: 'application/json' });
-    const url = URL.createObjectURL(dataBlob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `minecraft-checklist-${new Date().toISOString().split('T')[0]}.json`;
-    link.click();
-    URL.revokeObjectURL(url);
-    toast.success('Als JSON exportiert');
-  };
-
-  const handleExportText = () => {
-    const text = checklist
-      .map((item) => {
-        const stacks_text = item.stacks > 0 ? `${item.stacks} Stacks` : '';
-        const items_text = item.items > 0 ? `${item.items} Items` : '';
-        const amount = [stacks_text, items_text].filter(Boolean).join(' + ') || '1';
-        const status = item.checked ? '✓' : '☐';
-        return `${status} ${item.name} - ${amount}`;
-      })
-      .join('\n');
-
-    const blob = new Blob([text], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `minecraft-checklist-${new Date().toISOString().split('T')[0]}.txt`;
-    link.click();
-    URL.revokeObjectURL(url);
-    toast.success('Als Text exportiert');
-  };
-
-  const handleImportJSON = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      try {
-        const imported = JSON.parse(e.target?.result as string);
-        if (Array.isArray(imported)) {
-          setChecklist(imported);
-          toast.success(`${imported.length} Items importiert`);
-        } else {
-          toast.error('Ungültiges Format');
-        }
-      } catch (error) {
-        toast.error('Fehler beim Importieren');
-      }
-    };
-    reader.readAsText(file);
-    if (fileInputRef.current) fileInputRef.current.value = '';
-  };
-
-  const handleClearChecklist = () => {
-    if (window.confirm('Möchtest du wirklich alle Items löschen?')) {
-      setChecklist([]);
-      toast.success('Checkliste geleert');
-    }
-  };
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(checklist));
+  }, [checklist]);
 
   // Tastenkombinationen
   useEffect(() => {
@@ -168,34 +55,134 @@ export default function Home() {
       if (e.ctrlKey || e.metaKey) {
         if (e.key === 'e') {
           e.preventDefault();
-          handleExportJSON();
+          exportAsJSON();
         } else if (e.key === 'i') {
           e.preventDefault();
           fileInputRef.current?.click();
         } else if (e.key === 'f') {
           e.preventDefault();
-          const searchInput = document.querySelector('input[placeholder="Suche Items..."]') as HTMLInputElement;
-          if (searchInput) searchInput.focus();
+          (document.querySelector('input[placeholder*="Suche"]') as HTMLInputElement)?.focus();
         }
       }
     };
-
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  }, [checklist]);
 
-  // Filtere Items basierend auf Kategorie
-  const filteredItems = selectedCategory === 'all' 
-    ? minecraftItems 
-    : getItemsByCategory(selectedCategory as any);
+  // Filtere Items basierend auf Suche und Kategorie
+  const filteredItems = () => {
+    let result = minecraftItems;
+
+    // Filter nach Kategorie
+    if (selectedCategory !== 'all') {
+      result = result.filter((item) => item.category === selectedCategory);
+    }
+
+    // Filter nach Suchquery
+    if (searchQuery) {
+      result = searchItems(searchQuery);
+      if (selectedCategory !== 'all') {
+        result = result.filter((item) => item.category === selectedCategory);
+      }
+    }
+
+    return result;
+  };
 
   const categories = getCategories();
-
-  const completedCount = checklist.filter((item) => item.checked).length;
-  const totalCount = checklist.length;
-  const progress = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
-
   const popularItems = minecraftItems.slice(0, 8);
+  const searchResults = filteredItems();
+
+  // Berechne Statistiken
+  const totalCount = checklist.length;
+  const completedCount = checklist.filter((item) => item.checked).length;
+
+  // Füge Item zur Checkliste hinzu
+  const addItem = (item: MinecraftItem) => {
+    const newItem: ChecklistItem = {
+      ...item,
+      id: `${item.id}-${Date.now()}`,
+      itemId: item.id,
+      stacks,
+      items,
+      checked: false,
+    };
+    setChecklist([...checklist, newItem]);
+    setSelectedItem(null);
+    setStacks(0);
+    setItems(1);
+    toast.success(`${item.name} hinzugefügt!`);
+  };
+
+  // Entferne Item aus Checkliste
+  const removeItem = (id: string) => {
+    setChecklist(checklist.filter((item) => item.id !== id));
+  };
+
+  // Toggle Item als erledigt
+  const toggleItem = (id: string) => {
+    setChecklist(
+      checklist.map((item) =>
+        item.id === id ? { ...item, checked: !item.checked } : item
+      )
+    );
+  };
+
+  // Exportiere als JSON
+  const exportAsJSON = () => {
+    const data = JSON.stringify(checklist, null, 2);
+    const blob = new Blob([data], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `minecraft-checklist-${new Date().toISOString().split('T')[0]}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    toast.success('Checkliste exportiert!');
+  };
+
+  // Exportiere als Text
+  const exportAsText = () => {
+    const text = checklist
+      .map((item) => `${item.checked ? '✓' : '○'} ${item.name} (${item.stacks}x${STACK_SIZE} + ${item.items})`)
+      .join('\n');
+    const blob = new Blob([text], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `minecraft-checklist-${new Date().toISOString().split('T')[0]}.txt`;
+    a.click();
+    URL.revokeObjectURL(url);
+    toast.success('Checkliste als Text exportiert!');
+  };
+
+  // Importiere aus JSON
+  const importFromJSON = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const data = JSON.parse(e.target?.result as string);
+        if (Array.isArray(data)) {
+          setChecklist(data);
+          toast.success('Checkliste importiert!');
+        }
+      } catch (error) {
+        toast.error('Fehler beim Importieren der Datei');
+      }
+    };
+    reader.readAsText(file);
+  };
+
+  // Lösche alle Items
+  const clearAll = () => {
+    if (window.confirm('Wirklich alle Items löschen?')) {
+      setChecklist([]);
+      toast.success('Checkliste geleert!');
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#1a1a1a] text-white p-4">
@@ -299,64 +286,76 @@ export default function Home() {
               {popularItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => handleSelectItem(item)}
-                  className="h-16 w-16 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:border-[#FFD700] hover:bg-[#2a2a2a] transition-all flex items-center justify-center"
+                  onClick={() => setSelectedItem(item)}
+                  className="p-2 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
                   title={item.name}
                 >
                   <img
                     src={item.imageUrl || getItemImageUrl(item.id)}
                     alt={item.name}
-                    className="h-14 w-14 object-contain"
-                    style={{ minHeight: '56px', minWidth: '56px', backgroundColor: '#333' }}
+                    className="h-8 w-8 object-contain mx-auto"
+                    style={{ minHeight: '32px', minWidth: '32px', backgroundColor: '#333' }}
                   />
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Suchergebnisse oder Kategorie-Items */}
-          {(searchQuery || selectedCategory !== 'all') && (
-            <div className="space-y-2">
-              {(searchQuery ? searchResults : filteredItems).slice(0, 10).map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => handleSelectItem(item)}
-                  className="w-full flex items-center gap-3 p-2 bg-[#1a1a1a] border border-[#4CAF50] rounded hover:bg-[#2a2a2a] text-left"
-                >
-                  <img
-                    src={item.imageUrl || getItemImageUrl(item.id)}
-                    alt={item.name}
-                    className="h-8 w-8 object-contain"
-                    style={{ minHeight: '32px', minWidth: '32px', backgroundColor: '#333' }}
-                  />
-                  <span className="text-[#4CAF50]">{item.name}</span>
-                </button>
-              ))}
+          {/* Suchergebnisse */}
+          {searchQuery && (
+            <div className="mb-6">
+              <p className="text-[#FFD700] font-bold mb-3">SUCHERGEBNISSE ({searchResults.length}):</p>
+              <div className="grid grid-cols-4 gap-2 max-h-64 overflow-y-auto">
+                {searchResults.slice(0, 20).map((item) => (
+                  <button
+                    key={item.id}
+                    onClick={() => setSelectedItem(item)}
+                    className="p-2 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
+                    title={item.name}
+                  >
+                    <img
+                      src={item.imageUrl || getItemImageUrl(item.id)}
+                      alt={item.name}
+                      className="h-8 w-8 object-contain mx-auto"
+                      style={{ minHeight: '32px', minWidth: '32px', backgroundColor: '#333' }}
+                    />
+                  </button>
+                ))}
+              </div>
             </div>
           )}
 
           {/* Item Details */}
           {selectedItem && (
             <div className="mt-6 p-4 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded">
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-3">
                   <img
                     src={selectedItem.imageUrl || getItemImageUrl(selectedItem.id)}
                     alt={selectedItem.name}
                     className="h-12 w-12 object-contain"
                     style={{ minHeight: '48px', minWidth: '48px', backgroundColor: '#333' }}
                   />
-                <div>
-                  <h3 className="text-lg font-bold text-[#4CAF50]">{selectedItem.name}</h3>
-                  {selectedItem.englishName && selectedItem.englishName !== selectedItem.name && (
-                    <p className="text-sm text-[#FFD700]">{selectedItem.englishName}</p>
-                  )}
-                  <p className="text-sm text-[#b0b0b0]">{selectedItem.category}</p>
-                  {(selectedItem.creativeOnly || selectedItem.survivalOnly) && (
-                    <p className="text-xs text-[#FF6B35] mt-1">
-                      {selectedItem.creativeOnly ? '🎨 Creative Only' : selectedItem.survivalOnly ? '⛏️ Survival Only' : ''}
-                    </p>
-                  )}
+                  <div>
+                    <h3 className="text-lg font-bold text-[#4CAF50]">{selectedItem.name}</h3>
+                    {selectedItem.englishName && selectedItem.englishName !== selectedItem.name && (
+                      <p className="text-sm text-[#FFD700]">{selectedItem.englishName}</p>
+                    )}
+                    <p className="text-sm text-[#b0b0b0]">{selectedItem.category}</p>
+                    {(selectedItem.creativeOnly || selectedItem.survivalOnly) && (
+                      <p className="text-xs text-[#FF6B35] mt-1">
+                        {selectedItem.creativeOnly ? '🎨 Creative Only' : selectedItem.survivalOnly ? '⛏️ Survival Only' : ''}
+                      </p>
+                    )}
+                  </div>
                 </div>
+                <button
+                  onClick={() => setSelectedItem(null)}
+                  className="p-1 hover:bg-[#4CAF50]/20 rounded transition-colors"
+                  title="Schließen"
+                >
+                  <X className="h-5 w-5 text-[#4CAF50]" />
+                </button>
               </div>
 
               {/* Stacks und Items Eingabe */}
@@ -389,7 +388,7 @@ export default function Home() {
                   <label className="text-[#FFD700] text-sm font-bold">Einzelne Items:</label>
                   <div className="flex items-center gap-2 mt-1">
                     <Button
-                      onClick={() => setItems(Math.max(0, items - 1))}
+                      onClick={() => setItems(Math.max(1, items - 1))}
                       className="h-8 w-8 p-0 bg-[#4CAF50] hover:bg-[#45a049]"
                     >
                       −
@@ -397,7 +396,7 @@ export default function Home() {
                     <Input
                       type="number"
                       value={items}
-                      onChange={(e) => setItems(Math.max(0, parseInt(e.target.value) || 0))}
+                      onChange={(e) => setItems(Math.max(1, parseInt(e.target.value) || 1))}
                       className="w-16 text-center border border-[#4CAF50] bg-[#2a2a2a] text-white"
                     />
                     <Button
@@ -408,25 +407,13 @@ export default function Home() {
                     </Button>
                   </div>
                 </div>
-              </div>
 
-              <div className="flex gap-2 mt-4">
                 <Button
-                  onClick={handleAddToChecklist}
-                  className="flex-1 bg-[#4CAF50] hover:bg-[#45a049] text-white font-bold"
+                  onClick={() => addItem(selectedItem)}
+                  className="w-full bg-[#4CAF50] hover:bg-[#45a049] text-white font-bold"
                 >
-                  ZUR LISTE HINZUFÜGEN
-                </Button>
-                <Button
-                  onClick={() => {
-                    setSelectedItem(null);
-                    setStacks(0);
-                    setItems(1);
-                  }}
-                  className="h-10 w-10 p-0 bg-[#8B4513] hover:bg-[#6B3410] text-white"
-                  title="Schließen"
-                >
-                  <X className="h-4 w-4" />
+                  <Plus className="h-4 w-4 mr-2" />
+                  ZUR CHECKLISTE HINZUFÜGEN
                 </Button>
               </div>
             </div>
@@ -437,42 +424,39 @@ export default function Home() {
         <div className="border-4 border-[#8B7355] rounded-lg p-6 bg-[#2a2a2a]">
           <h2 className="text-2xl font-bold text-[#4CAF50] mb-4">DEINE CHECKLISTE</h2>
 
-          {/* Fortschrittsbalken */}
-          <div className="mb-6">
-            <div className="flex justify-between text-sm mb-2">
-              <span className="text-[#FFD700]">FORTSCHRITT</span>
-              <span className="text-[#4CAF50]">{progress}%</span>
+          {/* Fortschritt */}
+          <div className="mb-4">
+            <div className="flex justify-between mb-2">
+              <span className="text-[#FFD700] font-bold">FORTSCHRITT</span>
+              <span className="text-[#4CAF50]">{Math.round((completedCount / totalCount) * 100) || 0}%</span>
             </div>
-            <div className="w-full h-4 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded overflow-hidden">
+            <div className="w-full bg-[#1a1a1a] border-2 border-[#4CAF50] rounded h-4 overflow-hidden">
               <div
-                className="h-full bg-[#4CAF50] transition-all"
-                style={{ width: `${progress}%` }}
+                className="bg-[#4CAF50] h-full transition-all"
+                style={{ width: `${totalCount > 0 ? (completedCount / totalCount) * 100 : 0}%` }}
               />
             </div>
           </div>
 
           {/* Export/Import Buttons */}
-          <div className="flex gap-2 mb-6">
+          <div className="grid grid-cols-3 gap-2 mb-4">
             <Button
-              onClick={handleExportJSON}
-              className="flex-1 bg-[#4CAF50] hover:bg-[#45a049] text-white text-sm"
-              title="Als JSON exportieren (Strg+E)"
+              onClick={exportAsJSON}
+              className="bg-green-600 hover:bg-green-700 text-white font-bold text-sm"
             >
               <Download className="h-4 w-4 mr-1" />
               JSON
             </Button>
             <Button
-              onClick={handleExportText}
-              className="flex-1 bg-[#4CAF50] hover:bg-[#45a049] text-white text-sm"
-              title="Als Text exportieren"
+              onClick={exportAsText}
+              className="bg-green-600 hover:bg-green-700 text-white font-bold text-sm"
             >
               <Download className="h-4 w-4 mr-1" />
               Text
             </Button>
             <Button
               onClick={() => fileInputRef.current?.click()}
-              className="flex-1 bg-[#FFD700] hover:bg-[#FFC700] text-black text-sm"
-              title="JSON importieren (Strg+I)"
+              className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold text-sm"
             >
               <Upload className="h-4 w-4 mr-1" />
               Import
@@ -481,19 +465,19 @@ export default function Home() {
               ref={fileInputRef}
               type="file"
               accept=".json"
-              onChange={handleImportJSON}
+              onChange={importFromJSON}
               className="hidden"
             />
           </div>
 
-          {/* Checkliste Items */}
-          {totalCount === 0 ? (
-            <div className="text-center py-12 border-2 border-dashed border-[#4CAF50] rounded">
-              <p className="text-[#b0b0b0]">Keine Items in deiner Liste.</p>
-              <p className="text-[#b0b0b0]">Suche nach Items und füge sie hinzu!</p>
+          {/* Checklisten Items */}
+          {checklist.length === 0 ? (
+            <div className="border-2 border-dashed border-[#4CAF50] rounded p-8 text-center">
+              <p className="text-[#b0b0b0] mb-2">Keine Items in deiner Liste.</p>
+              <p className="text-[#FFD700] text-sm">Suche nach Items und füge sie hinzu!</p>
               <Button
                 onClick={() => fileInputRef.current?.click()}
-                className="mt-4 bg-[#FFD700] hover:bg-[#FFC700] text-black"
+                className="mt-4 bg-yellow-500 hover:bg-yellow-600 text-white font-bold"
               >
                 <Upload className="h-4 w-4 mr-2" />
                 Oder importiere eine Checkliste
@@ -501,202 +485,50 @@ export default function Home() {
             </div>
           ) : (
             <div className="space-y-2 max-h-96 overflow-y-auto">
-              {checklist.map((item) => {
-                const stacks_text = item.stacks > 0 ? `${item.stacks} Stacks` : '';
-                const items_text = item.items > 0 ? `${item.items}` : '';
-                const amount = [stacks_text, items_text].filter(Boolean).join(' + ') || '1';
-
-                return (
-                  <div
-                    key={item.id}
-                    className={`flex items-center gap-3 p-3 rounded border-2 ${
-                      item.checked
-                        ? 'border-[#666] bg-[#1a1a1a] opacity-60'
-                        : 'border-[#4CAF50] bg-[#1a1a1a]'
-                    }`}
-                  >
-                    <Checkbox
-                      checked={item.checked}
-                      onChange={() => handleToggleItem(item.id)}
-                      className="h-5 w-5"
-                    />
-                    <img
-                      src={item.imageUrl || getItemImageUrl(item.itemId)}
-                      alt={item.name}
-                      className="h-8 w-8 object-contain"
-                      style={{ minHeight: '32px', minWidth: '32px', backgroundColor: '#333' }}
-                    />
-                    <div className="flex-1">
-                      <p className={`font-bold ${item.checked ? 'line-through text-[#666]' : 'text-[#4CAF50]'}`}>
-                        {item.name}
-                      </p>
-                      <p className="text-xs text-[#b0b0b0]">{amount}</p>
-                    </div>
-                    <Button
-                      onClick={() => setInfoItem(item)}
-                      className="h-8 w-8 p-0 bg-[#FFD700] hover:bg-[#FFC700] text-black"
-                      title="Info anzeigen"
-                    >
-                      <Info className="h-4 w-4" />
-                    </Button>
-                    <Button
-                      onClick={() => handleRemoveItem(item.id)}
-                      className="h-8 w-8 p-0 bg-[#FF6B35] hover:bg-[#FF5722] text-white"
-                    >
-                      <X className="h-4 w-4" />
-                    </Button>
+              {checklist.map((item) => (
+                <div key={item.id} className="flex items-center gap-2 p-2 bg-[#1a1a1a] border border-[#4CAF50] rounded">
+                  <Checkbox
+                    checked={item.checked}
+                    onChange={() => toggleItem(item.id)}
+                    className="border-[#4CAF50]"
+                  />
+                  <img
+                    src={item.imageUrl || getItemImageUrl(item.itemId)}
+                    alt={item.name}
+                    className="h-6 w-6 object-contain"
+                    style={{ minHeight: '24px', minWidth: '24px', backgroundColor: '#333' }}
+                  />
+                  <div className="flex-1">
+                    <p className={`text-sm font-bold ${item.checked ? 'line-through text-[#666]' : 'text-[#4CAF50]'}`}>
+                      {item.name}
+                    </p>
+                    <p className="text-xs text-[#b0b0b0]">
+                      {item.stacks}x{STACK_SIZE} + {item.items}
+                    </p>
                   </div>
-                );
-              })}
+                  <Button
+                    onClick={() => removeItem(item.id)}
+                    className="h-6 w-6 p-0 bg-red-600 hover:bg-red-700"
+                  >
+                    <X className="h-4 w-4" />
+                  </Button>
+                </div>
+              ))}
             </div>
           )}
-          
-          {/* Löschen Button */}
-          {totalCount > 0 && (
+
+          {/* Clear All Button */}
+          {checklist.length > 0 && (
             <Button
-              onClick={handleClearChecklist}
-              className="w-full mt-4 bg-[#FF6B35] hover:bg-[#FF5722] text-white"
+              onClick={clearAll}
+              className="w-full mt-4 bg-red-600 hover:bg-red-700 text-white font-bold"
             >
               <Trash2 className="h-4 w-4 mr-2" />
-              Alle löschen
+              ALLE LÖSCHEN
             </Button>
           )}
         </div>
       </div>
-
-      {/* Info Modal */}
-      {infoItem && (() => {
-        const itemIdForLookup = (infoItem as any).itemId || infoItem.id;
-        const details = getItemDetails(itemIdForLookup);
-        return (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-            <Card className="border-4 border-[#8B7355] bg-[#2a2a2a] p-6 shadow-2xl max-w-2xl max-h-[80vh] overflow-y-auto">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-4">
-                  <img
-                    src={infoItem.imageUrl || getItemImageUrl(infoItem.id)}
-                    alt={infoItem.name}
-                    className="h-16 w-16 object-contain"
-                    style={{ minHeight: '64px', minWidth: '64px', backgroundColor: '#333' }}
-                  />
-                  <div>
-                    <h2 className="text-2xl font-bold text-[#4CAF50]">{infoItem.name}</h2>
-                    <p className="text-sm text-[#b0b0b0]">{infoItem.category.toUpperCase()}</p>
-                  </div>
-                </div>
-                <Button
-                  onClick={() => setInfoItem(null)}
-                  className="h-8 w-8 border-2 border-[#FF6B35] bg-transparent p-0 text-[#FF6B35] hover:bg-[#FF6B35] hover:text-white"
-                >
-                  <X className="h-4 w-4" />
-                </Button>
-              </div>
-
-              <div className="space-y-4">
-                {details ? (
-                  <>
-                    {details.location && (
-                      <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
-                        <h3 className="font-bold text-[#FFD700] mb-2">📍 FUNDORT</h3>
-                        <p className="text-white">{details.location}</p>
-                      </div>
-                    )}
-
-                    {details.biomes && (
-                      <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
-                        <h3 className="font-bold text-[#FFD700] mb-2">🌍 BIOME</h3>
-                        <p className="text-white">{details.biomes}</p>
-                      </div>
-                    )}
-
-                    {details.height && (
-                      <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
-                        <h3 className="font-bold text-[#FFD700] mb-2">📏 HÖHE</h3>
-                        <p className="text-white">{details.height}</p>
-                      </div>
-                    )}
-
-                    {details.recipeGrid && (
-                      <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
-                        <h3 className="font-bold text-[#FFD700] mb-2">🔨 CRAFTING-REZEPT</h3>
-                        <div className="flex items-center justify-center gap-4">
-                          <div className="grid grid-cols-3 gap-1">
-                            {details.recipeGrid.inputs.map((itemId, idx) => (
-                              <div key={idx} className="w-12 h-12 bg-[#2a2a2a] border border-[#4CAF50] rounded flex items-center justify-center">
-                                {itemId && (
-                                  <img
-                                    src={getItemImageUrl(itemId)}
-                                    alt={itemId}
-                                    className="w-10 h-10 object-contain"
-                                    style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }}
-                                  />
-                                )}
-                              </div>
-                            ))}
-                          </div>
-                          <div className="text-[#FFD700] text-xl font-bold">→</div>
-                          <div className="w-16 h-16 bg-[#2a2a2a] border-2 border-[#FFD700] rounded flex items-center justify-center">
-                            <div className="text-center">
-                              <img
-                                src={getItemImageUrl(details.recipeGrid.output)}
-                                alt={details.recipeGrid.output}
-                                className="w-12 h-12 object-contain mx-auto"
-                                style={{ minHeight: '48px', minWidth: '48px', backgroundColor: '#333' }}
-                              />
-                              {details.recipeGrid.outputCount && details.recipeGrid.outputCount > 1 && (
-                                <p className="text-[#FFD700] text-xs font-bold">x{details.recipeGrid.outputCount}</p>
-                              )}
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-
-                    {details.recipe && !details.recipeGrid && (
-                      <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
-                        <h3 className="font-bold text-[#FFD700] mb-2">🔨 HERSTELLUNG</h3>
-                        <p className="text-white whitespace-pre-wrap">{details.recipe}</p>
-                      </div>
-                    )}
-
-                    {details.miningRequirement && (
-                      <div className="rounded border-2 border-[#FF6B35] bg-[#1a1a1a] p-3">
-                        <h3 className="font-bold text-[#FFD700] mb-2">⛏️ ABBAU-ANFORDERUNG</h3>
-                        <p className="text-white">{details.miningRequirement}</p>
-                      </div>
-                    )}
-
-                    {details.description && (
-                      <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
-                        <h3 className="font-bold text-[#FFD700] mb-2">ℹ️ BESCHREIBUNG</h3>
-                        <p className="text-white">{details.description}</p>
-                      </div>
-                    )}
-
-                    {details.recipeUrl && (
-                      <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
-                        <h3 className="font-bold text-[#FFD700] mb-2">🔗 VOLLSTÄNDIGES REZEPT</h3>
-                        <a
-                          href={details.recipeUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block text-[#4CAF50] hover:text-[#FFD700] underline font-bold"
-                        >
-                          Öffne auf minecraft-craftings.com →
-                        </a>
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <div className="rounded border-2 border-[#FFD700] bg-[#1a1a1a] p-3">
-                    <p className="text-[#FFD700]">Keine Informationen für dieses Item verfügbar.</p>
-                  </div>
-                )}
-              </div>
-            </Card>
-          </div>
-        );
-      })()}
     </div>
   );
 }
