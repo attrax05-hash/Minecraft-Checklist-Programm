@@ -534,5 +534,31 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
 };
 
 export const getItemDetails = (itemId: string): ItemDetails | undefined => {
-  return itemDetailsMap[itemId];
+  // Versuche zuerst die exakte ID
+  if (itemDetailsMap[itemId]) {
+    return itemDetailsMap[itemId];
+  }
+
+  // Fallback: Suche nach ähnlichen IDs
+  // z.B. wenn "deepslate_diamond_ore" nicht gefunden wird, suche nach "diamond_ore"
+  const baseName = itemId.replace(/^deepslate_/, '').replace(/^raw_/, '');
+  if (baseName !== itemId && itemDetailsMap[baseName]) {
+    return itemDetailsMap[baseName];
+  }
+
+  // Weitere Fallback-Versuche
+  const variants = [
+    itemId.replace(/^deepslate_/, ''),
+    itemId.replace(/^raw_/, ''),
+    itemId.replace(/_ore$/, ''),
+    itemId.replace(/_block$/, ''),
+  ];
+
+  for (const variant of variants) {
+    if (itemDetailsMap[variant]) {
+      return itemDetailsMap[variant];
+    }
+  }
+
+  return undefined;
 };

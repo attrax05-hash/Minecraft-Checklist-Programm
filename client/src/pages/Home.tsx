@@ -9,11 +9,12 @@ import type { MinecraftItem } from '@/lib/minecraftItems';
 import { getItemDetails } from '@/lib/itemDetails';
 import { toast } from 'sonner';
 
-interface ChecklistItem extends MinecraftItem {
+interface ChecklistItem extends Omit<MinecraftItem, 'id'> {
+  id: string; // Eindeutige ID für den Listeneintrag
+  itemId: string; // Original Minecraft Item ID (für Lookups)
   stacks: number; // Anzahl der Stacks (à 64)
   items: number; // Einzelne Items
   checked: boolean;
-  id: string;
 }
 
 const STORAGE_KEY = 'minecraft-checklist-data';
@@ -67,6 +68,7 @@ export default function Home() {
       items,
       checked: false,
       id: `${item.id}-${Date.now()}`,
+      itemId: item.id,
     };
     setChecklist([...checklist, newItem]);
     setSearchQuery('');
@@ -527,7 +529,9 @@ export default function Home() {
 
       {/* Info Modal */}
       {infoItem && (() => {
-        const details = getItemDetails(infoItem.id);
+        // Verwende itemId wenn vorhanden (für ChecklistItems), sonst id (für MinecraftItems)
+        const itemIdForLookup = (infoItem as any).itemId || infoItem.id;
+        const details = getItemDetails(itemIdForLookup);
         return (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
             <Card className="border-4 border-[#8B7355] bg-[#2a2a2a] p-6 shadow-2xl max-w-2xl max-h-[80vh] overflow-y-auto">
@@ -555,38 +559,46 @@ export default function Home() {
               </div>
 
               <div className="space-y-4">
-                {details?.location && (
-                  <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
-                    <h3 className="font-bold text-[#FFD700] mb-2">📍 FUNDORT</h3>
-                    <p className="text-white">{details.location}</p>
-                  </div>
-                )}
+                {details ? (
+                  <>
+                    {details.location && (
+                      <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
+                        <h3 className="font-bold text-[#FFD700] mb-2">📍 FUNDORT</h3>
+                        <p className="text-white">{details.location}</p>
+                      </div>
+                    )}
 
-                {details?.biomes && (
-                  <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
-                    <h3 className="font-bold text-[#FFD700] mb-2">🌍 BIOME</h3>
-                    <p className="text-white">{details.biomes}</p>
-                  </div>
-                )}
+                    {details.biomes && (
+                      <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
+                        <h3 className="font-bold text-[#FFD700] mb-2">🌍 BIOME</h3>
+                        <p className="text-white">{details.biomes}</p>
+                      </div>
+                    )}
 
-                {details?.height && (
-                  <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
-                    <h3 className="font-bold text-[#FFD700] mb-2">📏 HÖHE</h3>
-                    <p className="text-white">{details.height}</p>
-                  </div>
-                )}
+                    {details.height && (
+                      <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
+                        <h3 className="font-bold text-[#FFD700] mb-2">📏 HÖHE</h3>
+                        <p className="text-white">{details.height}</p>
+                      </div>
+                    )}
 
-                {details?.recipe && (
-                  <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
-                    <h3 className="font-bold text-[#FFD700] mb-2">🔨 HERSTELLUNG</h3>
-                    <p className="text-white whitespace-pre-wrap">{details.recipe}</p>
-                  </div>
-                )}
+                    {details.recipe && (
+                      <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
+                        <h3 className="font-bold text-[#FFD700] mb-2">🔨 HERSTELLUNG</h3>
+                        <p className="text-white whitespace-pre-wrap">{details.recipe}</p>
+                      </div>
+                    )}
 
-                {details?.description && (
-                  <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
-                    <h3 className="font-bold text-[#FFD700] mb-2">ℹ️ BESCHREIBUNG</h3>
-                    <p className="text-white">{details.description}</p>
+                    {details.description && (
+                      <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
+                        <h3 className="font-bold text-[#FFD700] mb-2">ℹ️ BESCHREIBUNG</h3>
+                        <p className="text-white">{details.description}</p>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <div className="rounded border-2 border-[#FFD700] bg-[#1a1a1a] p-3">
+                    <p className="text-[#FFD700]">Keine Informationen für dieses Item verfügbar.</p>
                   </div>
                 )}
               </div>
