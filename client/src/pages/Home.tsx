@@ -9,16 +9,19 @@ import type { MinecraftItem } from '@/lib/minecraftItems';
 import { toast } from 'sonner';
 
 interface ChecklistItem extends MinecraftItem {
-  quantity: number;
+  stacks: number; // Anzahl der Stacks (à 64)
+  items: number; // Einzelne Items
   checked: boolean;
   id: string;
 }
 
 const STORAGE_KEY = 'minecraft-checklist-data';
+const STACK_SIZE = 64;
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [quantity, setQuantity] = useState(1);
+  const [stacks, setStacks] = useState(0);
+  const [items, setItems] = useState(1);
   const [checklist, setChecklist] = useState<ChecklistItem[]>([]);
   const [selectedItem, setSelectedItem] = useState<MinecraftItem | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -50,15 +53,23 @@ export default function Home() {
   }, [searchQuery]);
 
   const handleAddToChecklist = (item: MinecraftItem) => {
+    // Nur hinzufügen wenn mindestens Stacks oder Items > 0
+    if (stacks === 0 && items === 0) {
+      toast.error('Bitte gib mindestens 1 Item ein');
+      return;
+    }
+
     const newItem: ChecklistItem = {
       ...item,
-      quantity,
+      stacks,
+      items,
       checked: false,
       id: `${item.id}-${Date.now()}`,
     };
     setChecklist([...checklist, newItem]);
     setSearchQuery('');
-    setQuantity(1);
+    setStacks(0);
+    setItems(1);
     setSelectedItem(null);
     toast.success(`${item.name} hinzugefügt!`);
   };
@@ -105,7 +116,15 @@ export default function Home() {
 
     checklist.forEach((item) => {
       const status = item.checked ? '✓' : '○';
-      text += `${status} ${item.name} (${item.category}) x${item.quantity}\n`;
+      let quantity = '';
+      if (item.stacks > 0 && item.items > 0) {
+        quantity = `${item.stacks} Stacks + ${item.items}`;
+      } else if (item.stacks > 0) {
+        quantity = `${item.stacks} Stacks`;
+      } else {
+        quantity = `${item.items}`;
+      }
+      text += `${status} ${item.name} (${item.category}) x${quantity}\n`;
     });
 
     const dataBlob = new Blob([text], { type: 'text/plain' });
@@ -118,6 +137,22 @@ export default function Home() {
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
     toast.success('Checkliste als Text exportiert');
+  };
+
+  // Formatiere die Mengenanzeige
+  const formatQuantity = (stack: number, item: number): string => {
+    if (stack > 0 && item > 0) {
+      return `${stack} Stacks + ${item}`;
+    } else if (stack > 0) {
+      return `${stack} Stacks`;
+    } else {
+      return `${item}`;
+    }
+  };
+
+  // Berechne Gesamtmenge für Fortschritt
+  const getTotalItems = (stack: number, item: number): number => {
+    return stack * STACK_SIZE + item;
   };
 
   const checkedCount = checklist.filter((item) => item.checked).length;
@@ -233,14 +268,15 @@ export default function Home() {
                     </div>
                   </div>
 
+                  {/* Stacks Input */}
                   <div className="space-y-2">
                     <label className="block text-sm font-semibold text-[#FFD700]">
-                      Menge:
+                      Stacks (à 64):
                     </label>
                     <div className="flex items-center gap-2">
                       <Button
                         onClick={() =>
-                          setQuantity(Math.max(1, quantity - 1))
+                          setStacks(Math.max(0, stacks - 1))
                         }
                         className="h-8 w-8 border-2 border-[#4CAF50] bg-[#2a2a2a] p-0 text-[#4CAF50] hover:bg-[#4CAF50] hover:text-[#1a1a1a]"
                       >
@@ -248,24 +284,71 @@ export default function Home() {
                       </Button>
                       <Input
                         type="number"
-                        min="1"
+                        min="0"
                         max="999"
-                        value={quantity}
+                        value={stacks}
                         onChange={(e) =>
-                          setQuantity(
-                            Math.max(1, parseInt(e.target.value) || 1)
-                          )
+                          setStacks(Math.max(0, parseInt(e.target.value) || 0))
                         }
                         className="h-8 w-16 border-2 border-[#4CAF50] bg-[#1a1a1a] text-center text-white"
                       />
                       <Button
-                        onClick={() => setQuantity(quantity + 1)}
+                        onClick={() => setStacks(stacks + 1)}
                         className="h-8 w-8 border-2 border-[#4CAF50] bg-[#2a2a2a] p-0 text-[#4CAF50] hover:bg-[#4CAF50] hover:text-[#1a1a1a]"
                       >
                         +
                       </Button>
                     </div>
                   </div>
+
+                  {/* Items Input */}
+                  <div className="space-y-2">
+                    <label className="block text-sm font-semibold text-[#FFD700]">
+                      Einzelne Items:
+                    </label>
+                    <div className="flex items-center gap-2">
+                      <Button
+                        onClick={() =>
+                          setItems(Math.max(0, items - 1))
+                        }
+                        className="h-8 w-8 border-2 border-[#4CAF50] bg-[#2a2a2a] p-0 text-[#4CAF50] hover:bg-[#4CAF50] hover:text-[#1a1a1a]"
+                      >
+                        −
+                      </Button>
+                      <Input
+                        type="number"
+                        min="0"
+                        max="63"
+                        value={items}
+                        onChange={(e) => {
+                          const val = Math.max(0, Math.min(63, parseInt(e.target.value) || 0));
+                          setItems(val);
+                        }}
+                        className="h-8 w-16 border-2 border-[#4CAF50] bg-[#1a1a1a] text-center text-white"
+                      />
+                      <Button
+                        onClick={() => setItems(Math.min(63, items + 1))}
+                        className="h-8 w-8 border-2 border-[#4CAF50] bg-[#2a2a2a] p-0 text-[#4CAF50] hover:bg-[#4CAF50] hover:text-[#1a1a1a]"
+                      >
+                        +
+                      </Button>
+                    </div>
+                    <div className="text-xs text-[#b0b0b0]">
+                      Max. 63 Items (ab 64 = 1 Stack)
+                    </div>
+                  </div>
+
+                  {/* Summary */}
+                  {(stacks > 0 || items > 0) && (
+                    <div className="rounded border-2 border-[#4CAF50] bg-[#2a2a2a] p-2 text-center">
+                      <div className="text-sm text-[#FFD700] font-bold">
+                        Gesamt: {formatQuantity(stacks, items)}
+                      </div>
+                      <div className="text-xs text-[#b0b0b0]">
+                        ({getTotalItems(stacks, items)} Items)
+                      </div>
+                    </div>
+                  )}
 
                   <Button
                     onClick={() => handleAddToChecklist(selectedItem)}
@@ -395,7 +478,7 @@ export default function Home() {
                       </div>
                       <div className="flex items-center gap-2">
                         <div className="rounded border-2 border-[#4CAF50] bg-[#2a2a2a] px-3 py-1 font-bold text-[#4CAF50]">
-                          x{item.quantity}
+                          {formatQuantity(item.stacks, item.items)}
                         </div>
                         <Button
                           onClick={() => handleRemoveFromChecklist(item.id)}
