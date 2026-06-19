@@ -6962,7 +6962,7 @@ snapshots:
       '@electron/asar': 3.4.1
       debug: 4.4.3
       fs-extra: 7.0.1
-      lodash: 4.17.21
+      lodash: 4.18.1
       temp: 0.9.4
     optionalDependencies:
       '@electron/windows-sign': 1.2.2
