@@ -22,14 +22,12 @@ jobs:
       
       - name: Install pnpm
         run: npm install -g pnpm@10.4.1
-
       
       - name: Install dependencies
         run: pnpm install
       
-            - name: Build Electron app
-        run: pnpm run build:electron && electron-builder
-
+      - name: Build Electron app
+        run: pnpm run dist
       
       - name: Upload artifacts to Release
         uses: softprops/action-gh-release@v2
