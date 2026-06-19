@@ -283,12 +283,25 @@ export default function Home() {
                 </div>
               </div>
 
-              <Button
-                onClick={handleAddToChecklist}
-                className="w-full mt-4 bg-[#4CAF50] hover:bg-[#45a049] text-white font-bold"
-              >
-                ZUR LISTE HINZUFÜGEN
-              </Button>
+              <div className="flex gap-2 mt-4">
+                <Button
+                  onClick={handleAddToChecklist}
+                  className="flex-1 bg-[#4CAF50] hover:bg-[#45a049] text-white font-bold"
+                >
+                  ZUR LISTE HINZUFÜGEN
+                </Button>
+                <Button
+                  onClick={() => {
+                    setSelectedItem(null);
+                    setStacks(0);
+                    setItems(1);
+                  }}
+                  className="h-10 w-10 p-0 bg-[#8B4513] hover:bg-[#6B3410] text-white"
+                  title="Schließen"
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
           )}
         </div>
