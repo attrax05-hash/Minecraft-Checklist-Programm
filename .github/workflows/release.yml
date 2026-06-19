@@ -32,7 +32,6 @@ jobs:
       - name: Build with electron-builder
         run: npx electron-builder --publish never
 
-      
       - name: Upload artifacts to Release
         uses: softprops/action-gh-release@v2
         with:
@@ -42,5 +41,7 @@ jobs:
             release/**/*.AppImage
             release/**/*.deb
             release/**/*.zip
+          draft: false
+          prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
