@@ -1,4 +1,4 @@
-'use client';
+import React from 'react';
 
 import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
@@ -30,6 +30,7 @@ export default function Home() {
   const [checklist, setChecklist] = useState<ChecklistItem[]>([]);
   const [selectedItem, setSelectedItem] = useState<MinecraftItem | null>(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [infoPopupItem, setInfoPopupItem] = useState<ChecklistItem | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Lade Checkliste aus localStorage
@@ -157,20 +158,20 @@ export default function Home() {
   };
 
   // Importiere aus JSON
-  const importFromJSON = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
+  const importFromJSON = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
     if (!file) return;
 
     const reader = new FileReader();
-    reader.onload = (e) => {
+    reader.onload = (event) => {
       try {
-        const data = JSON.parse(e.target?.result as string);
+        const data = JSON.parse(event.target?.result as string);
         if (Array.isArray(data)) {
           setChecklist(data);
           toast.success('Checkliste importiert!');
         }
       } catch (error) {
-        toast.error('Fehler beim Importieren der Datei');
+        toast.error('Fehler beim Importieren der Checkliste!');
       }
     };
     reader.readAsText(file);
@@ -180,70 +181,18 @@ export default function Home() {
   const clearAll = () => {
     if (window.confirm('Wirklich alle Items löschen?')) {
       setChecklist([]);
-      toast.success('Checkliste geleert!');
+      toast.success('Alle Items gelöscht!');
     }
   };
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white p-4">
+    <div className="min-h-screen bg-[#1a1a1a] text-white p-6">
       {/* Header */}
-      <div className="mb-6 border-b-4 border-[#FFD700] pb-4">
-        <h1 className="text-4xl font-bold text-[#4CAF50] flex items-center gap-2">
-          <span>⛏️</span>
-          MINECRAFT CHECKLIST
-        </h1>
-        <p className="text-[#FFD700] mt-2">
+      <div className="mb-6">
+        <h1 className="text-4xl font-bold text-[#4CAF50] mb-2">MINECRAFT CHECKLIST</h1>
+        <p className="text-[#FFD700] text-sm">
           {completedCount} / {totalCount} erledigt
         </p>
-      </div>
-
-      {/* HOTBAR */}
-      <div className="mb-6 bg-[#2a2a2a] border-4 border-[#8B7355] rounded-lg p-4">
-        <p className="text-[#FFD700] font-bold mb-3 text-sm">KATEGORIEN-HOTBAR:</p>
-        <div className="flex gap-2 overflow-x-auto pb-2">
-          <button
-            onClick={() => setSelectedCategory('block')}
-            className="flex-shrink-0 p-3 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
-            title="Blöcke"
-          >
-            <img src={getItemImageUrl('dirt')} alt="Blöcke" className="h-10 w-10 object-contain" style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }} />
-          </button>
-          <button
-            onClick={() => setSelectedCategory('weapon')}
-            className="flex-shrink-0 p-3 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
-            title="Waffen"
-          >
-            <img src={getItemImageUrl('diamond_sword')} alt="Waffen" className="h-10 w-10 object-contain" style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }} />
-          </button>
-          <button
-            onClick={() => setSelectedCategory('armor')}
-            className="flex-shrink-0 p-3 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
-            title="Rüstung"
-          >
-            <img src={getItemImageUrl('diamond_helmet')} alt="Rüstung" className="h-10 w-10 object-contain" style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }} />
-          </button>
-          <button
-            onClick={() => setSelectedCategory('food')}
-            className="flex-shrink-0 p-3 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
-            title="Essen"
-          >
-            <img src={getItemImageUrl('cooked_beef')} alt="Essen" className="h-10 w-10 object-contain" style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }} />
-          </button>
-          <button
-            onClick={() => setSelectedCategory('redstone')}
-            className="flex-shrink-0 p-3 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
-            title="Redstone"
-          >
-            <img src={getItemImageUrl('redstone')} alt="Redstone" className="h-10 w-10 object-contain" style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }} />
-          </button>
-          <button
-            onClick={() => setSelectedCategory('decoration')}
-            className="flex-shrink-0 p-3 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
-            title="Dekoration"
-          >
-            <img src={getItemImageUrl('oak_door')} alt="Dekoration" className="h-10 w-10 object-contain" style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }} />
-          </button>
-        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -293,8 +242,8 @@ export default function Home() {
                   <img
                     src={item.imageUrl || getItemImageUrl(item.id)}
                     alt={item.name}
-                    className="h-8 w-8 object-contain mx-auto"
-                    style={{ minHeight: '32px', minWidth: '32px', backgroundColor: '#333' }}
+                    className="h-10 w-10 object-contain mx-auto"
+                    style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }}
                   />
                 </button>
               ))}
@@ -302,30 +251,28 @@ export default function Home() {
           </div>
 
           {/* Suchergebnisse */}
-          {searchQuery && (
-            <div className="mb-6">
-              <p className="text-[#FFD700] font-bold mb-3">SUCHERGEBNISSE ({searchResults.length}):</p>
-              <div className="grid grid-cols-4 gap-2 max-h-64 overflow-y-auto">
-                {searchResults.slice(0, 20).map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => setSelectedItem(item)}
-                    className="p-2 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
-                    title={item.name}
-                  >
-                    <img
-                      src={item.imageUrl || getItemImageUrl(item.id)}
-                      alt={item.name}
-                      className="h-8 w-8 object-contain mx-auto"
-                      style={{ minHeight: '32px', minWidth: '32px', backgroundColor: '#333' }}
-                    />
-                  </button>
-                ))}
-              </div>
+          <div>
+            <p className="text-[#FFD700] font-bold mb-3">SUCHERGEBNISSE ({searchResults.length}):</p>
+            <div className="grid grid-cols-4 gap-2 max-h-96 overflow-y-auto">
+              {searchResults.slice(0, 100).map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => setSelectedItem(item)}
+                  className="p-2 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded hover:bg-[#2a2a2a] transition-all"
+                  title={item.name}
+                >
+                  <img
+                    src={item.imageUrl || getItemImageUrl(item.id)}
+                    alt={item.name}
+                    className="h-10 w-10 object-contain mx-auto"
+                    style={{ minHeight: '40px', minWidth: '40px', backgroundColor: '#333' }}
+                  />
+                </button>
+              ))}
             </div>
-          )}
+          </div>
 
-          {/* Item Details */}
+          {/* Info Modal */}
           {selectedItem && (
             <div className="mt-6 p-4 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded">
               <div className="flex items-center justify-between mb-4">
@@ -460,19 +407,19 @@ export default function Home() {
               <span className="text-[#FFD700] font-bold">FORTSCHRITT</span>
               <span className="text-[#4CAF50]">{Math.round((completedCount / totalCount) * 100) || 0}%</span>
             </div>
-            <div className="w-full bg-[#1a1a1a] border-2 border-[#4CAF50] rounded h-4 overflow-hidden">
+            <div className="w-full bg-[#1a1a1a] border-2 border-[#4CAF50] rounded h-6">
               <div
-                className="bg-[#4CAF50] h-full transition-all"
+                className="bg-[#4CAF50] h-full rounded transition-all"
                 style={{ width: `${totalCount > 0 ? (completedCount / totalCount) * 100 : 0}%` }}
               />
             </div>
           </div>
 
           {/* Export/Import Buttons */}
-          <div className="grid grid-cols-3 gap-2 mb-4">
+          <div className="flex gap-2 mb-4">
             <Button
               onClick={exportAsJSON}
-              className="bg-green-600 hover:bg-green-700 text-white font-bold text-sm"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm"
             >
               <Download className="h-4 w-4 mr-1" />
               JSON
@@ -514,61 +461,51 @@ export default function Home() {
               </Button>
             </div>
           ) : (
-            <div className="space-y-2 max-h-[calc(100vh-500px)] overflow-y-auto">
+            <div className="space-y-3 max-h-[calc(100vh-500px)] overflow-y-auto">
               {checklist.map((item) => (
-                <div key={item.id} className="flex items-center gap-2 p-2 bg-[#1a1a1a] border border-[#4CAF50] rounded">
+                <div key={item.id} className="flex items-center gap-3 p-4 bg-[#1a1a1a] border-2 border-[#4CAF50] rounded">
                   <Checkbox
                     checked={item.checked}
                     onChange={() => toggleItem(item.id)}
-                    className="border-[#4CAF50]"
+                    className="border-[#4CAF50] w-6 h-6"
                   />
                   <img
                     src={item.imageUrl || getItemImageUrl(item.itemId)}
                     alt={item.name}
-                    className="h-6 w-6 object-contain"
-                    style={{ minHeight: '24px', minWidth: '24px', backgroundColor: '#333' }}
+                    className="h-12 w-12 object-contain"
+                    style={{ minHeight: '48px', minWidth: '48px', backgroundColor: '#333' }}
                   />
                   <div className="flex-1">
-                    <p className={`text-sm font-bold ${item.checked ? 'line-through text-[#666]' : 'text-[#4CAF50]'}`}>
+                    <p className={`text-base font-bold ${item.checked ? 'line-through text-[#666]' : 'text-[#4CAF50]'}`}>
                       {item.name}
                     </p>
-                    <div className="flex items-center gap-2 mt-1">
-                      <p className="text-xs text-[#b0b0b0]">
-                        {item.stacks > 0 && `${item.stacks} Stacks + `}{item.items}
+                    <div className="flex items-center gap-2 mt-2">
+                      <Input
+                        type="number"
+                        value={item.stacks * STACK_SIZE + item.items}
+                        onChange={(e) => {
+                          const total = Math.max(1, parseInt(e.target.value) || 1);
+                          const newStacks = Math.floor(total / STACK_SIZE);
+                          const newItems = total % STACK_SIZE || 1;
+                          setChecklist(checklist.map((i) => i.id === item.id ? { ...i, stacks: newStacks, items: newItems } : i));
+                        }}
+                        className="w-20 h-8 text-center border-2 border-[#4CAF50] bg-[#2a2a2a] text-white text-sm"
+                      />
+                      <p className="text-sm text-[#b0b0b0]">
+                        ({item.stacks > 0 && `${item.stacks}S + `}{item.items})
                       </p>
-                      <div className="flex items-center gap-1">
-                        <Button
-                          onClick={() => {
-                            const newItems = item.items - 1;
-                            if (newItems < 0) {
-                              setChecklist(checklist.map((i) => i.id === item.id ? { ...i, stacks: Math.max(0, i.stacks - 1), items: STACK_SIZE - 1 } : i));
-                            } else {
-                              setChecklist(checklist.map((i) => i.id === item.id ? { ...i, items: newItems } : i));
-                            }
-                          }}
-                          className="h-5 w-5 p-0 bg-[#4CAF50]/50 hover:bg-[#4CAF50] text-xs"
-                        >
-                          −
-                        </Button>
-                        <Button
-                          onClick={() => {
-                            const newItems = item.items + 1;
-                            if (newItems > STACK_SIZE) {
-                              setChecklist(checklist.map((i) => i.id === item.id ? { ...i, stacks: i.stacks + 1, items: 1 } : i));
-                            } else {
-                              setChecklist(checklist.map((i) => i.id === item.id ? { ...i, items: newItems } : i));
-                            }
-                          }}
-                          className="h-5 w-5 p-0 bg-[#4CAF50]/50 hover:bg-[#4CAF50] text-xs"
-                        >
-                          +
-                        </Button>
-                      </div>
                     </div>
                   </div>
                   <Button
+                    onClick={() => setInfoPopupItem(item)}
+                    className="h-8 w-8 p-0 bg-[#4CAF50]/50 hover:bg-[#4CAF50]"
+                    title="Info anschauen"
+                  >
+                    <Info className="h-4 w-4" />
+                  </Button>
+                  <Button
                     onClick={() => removeItem(item.id)}
-                    className="h-6 w-6 p-0 bg-red-600 hover:bg-red-700"
+                    className="h-8 w-8 p-0 bg-red-600 hover:bg-red-700"
                   >
                     <X className="h-4 w-4" />
                   </Button>
@@ -589,6 +526,67 @@ export default function Home() {
           )}
         </div>
       </div>
+
+      {/* Info Popup für Checklisten-Items */}
+      {infoPopupItem && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-[#2a2a2a] border-4 border-[#4CAF50] rounded-lg p-6 max-w-md w-full">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-bold text-[#4CAF50]">{infoPopupItem.name}</h3>
+              <button
+                onClick={() => setInfoPopupItem(null)}
+                className="p-1 hover:bg-[#4CAF50]/20 rounded transition-colors"
+              >
+                <X className="h-5 w-5 text-[#4CAF50]" />
+              </button>
+            </div>
+
+            <div className="space-y-3">
+              <div>
+                <p className="text-[#FFD700] font-bold">Kategorie:</p>
+                <p className="text-[#b0b0b0]">{infoPopupItem.category}</p>
+              </div>
+              <div>
+                <p className="text-[#FFD700] font-bold">Menge:</p>
+                <p className="text-[#b0b0b0]">{infoPopupItem.stacks} Stacks + {infoPopupItem.items} Items</p>
+              </div>
+              <div>
+                <p className="text-[#FFD700] font-bold">Biom:</p>
+                <p className="text-[#b0b0b0]">Überall</p>
+              </div>
+              <div>
+                <p className="text-[#FFD700] font-bold">Höhe:</p>
+                <p className="text-[#b0b0b0]">Überall</p>
+              </div>
+              <div>
+                <p className="text-[#FFD700] font-bold">Herstellung:</p>
+                <p className="text-[#b0b0b0]">Siehe Crafting-Link</p>
+              </div>
+              <div>
+                <a
+                  href="https://minecraft-craftings.com/#google_vignette"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#4CAF50] hover:text-[#45a049] underline"
+                >
+                  🔗 Crafting-Rezept anschauen
+                </a>
+              </div>
+              <div>
+                <p className="text-[#FFD700] font-bold">Verfügbarkeit:</p>
+                <p className="text-[#b0b0b0]">Survival &amp; Creative</p>
+              </div>
+            </div>
+
+            <Button
+              onClick={() => setInfoPopupItem(null)}
+              className="w-full mt-4 bg-[#4CAF50] hover:bg-[#45a049] text-white font-bold"
+            >
+              Schließen
+            </Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
