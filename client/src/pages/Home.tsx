@@ -589,10 +589,31 @@ export default function Home() {
                       </div>
                     )}
 
+                    {details.miningRequirement && (
+                      <div className="rounded border-2 border-[#FF6B35] bg-[#1a1a1a] p-3">
+                        <h3 className="font-bold text-[#FFD700] mb-2">⛏️ ABBAU-ANFORDERUNG</h3>
+                        <p className="text-white">{details.miningRequirement}</p>
+                      </div>
+                    )}
+
                     {details.description && (
                       <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
                         <h3 className="font-bold text-[#FFD700] mb-2">ℹ️ BESCHREIBUNG</h3>
                         <p className="text-white">{details.description}</p>
+                      </div>
+                    )}
+
+                    {details.recipeUrl && (
+                      <div className="rounded border-2 border-[#4CAF50] bg-[#1a1a1a] p-3">
+                        <h3 className="font-bold text-[#FFD700] mb-2">🔗 VOLLSTÄNDIGES REZEPT</h3>
+                        <a
+                          href={details.recipeUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block text-[#4CAF50] hover:text-[#FFD700] underline font-bold"
+                        >
+                          Öffne auf minecraft-craftings.com →
+                        </a>
                       </div>
                     )}
                   </>

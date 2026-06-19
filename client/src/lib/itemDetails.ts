@@ -7,6 +7,8 @@ export interface ItemDetails {
   height?: string; // Höhe (Y-Koordinate)
   recipe?: string; // Herstellungsrezept
   description?: string; // Allgemeine Beschreibung
+  miningRequirement?: string; // Abbau-Anforderung (z.B. "Mindestens Eisenspitzhacke")
+  recipeUrl?: string; // Link zu minecraft-craftings.com
 }
 
 export const itemDetailsMap: Record<string, ItemDetails> = {
@@ -63,7 +65,9 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
     biomes: 'Überall',
     height: 'Y: -64 bis -16 (Peak: Y: -59)',
     recipe: 'Abbau mit Diamantspitzhacke → Diamanterz → Ofen → Diamant',
-    description: 'Das wertvollste Erz, verwendet für beste Werkzeuge'
+    description: 'Das wertvollste Erz, verwendet für beste Werkzeuge',
+    miningRequirement: 'Mindestens Eisenspitzhacke erforderlich',
+    recipeUrl: 'https://minecraft-craftings.com/#diamond'
   },
   'deepslate_diamond_ore': {
     id: 'deepslate_diamond_ore',
@@ -72,7 +76,9 @@ export const itemDetailsMap: Record<string, ItemDetails> = {
     biomes: 'Überall',
     height: 'Y: -64 bis -16',
     recipe: 'Abbau mit Diamantspitzhacke → Tiefenschiefer Diamanterz → Ofen → Diamant',
-    description: 'Tiefere Variante von Diamanterz'
+    description: 'Tiefere Variante von Diamanterz',
+    miningRequirement: 'Mindestens Eisenspitzhacke erforderlich',
+    recipeUrl: 'https://minecraft-craftings.com/#diamond'
   },
   'emerald_ore': {
     id: 'emerald_ore',
