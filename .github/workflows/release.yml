@@ -23,8 +23,14 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
       
-      - name: Build Electron app
-        run: npm run dist
+      - name: Build Vite
+        run: npm run build
+      
+      - name: Build TypeScript
+        run: npx tsc electron/main.ts electron/preload.ts --outDir dist/electron --module esnext --target es2020 --moduleResolution node
+      
+      - name: Build with electron-builder
+        run: npx electron-builder
       
       - name: Upload artifacts to Release
         uses: softprops/action-gh-release@v2
