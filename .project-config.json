@@ -1,0 +1,36 @@
+{
+  "build_command": "pnpm run build",
+  "capabilities": [],
+  "dev_command": "pnpm run dev",
+  "env_vars": {},
+  "experiments": null,
+  "git_remote": {
+    "repo_url": "s3://vida-prod-gitrepo/webdev-git/310519663479248528/SRmXACUMB9gavYTJRaMQYb",
+    "access_key_id": "ASIAZV3A2ECZE6RQ3PGS",
+    "secret_access_key": "Cv1p1o04OxEtDdaMXEQt+CFOGpnRvPMqDLZO5zno",
+    "session_token": "IQoJb3JpZ2luX2VjEO///////////wEaCXVzLWVhc3QtMSJIMEYCIQCfgA9WWquwJf0bMKf0Ha9A6KEWIwQiuWQXREaw1j0ejgIhALT3dsogZUR1bPGHuB75kGiexBEyIRIxi7WBx3WMSKM+Kv8DCLj//////////wEQBBoMNjY1Mzg2MDk4ODY2IgwbvrWVy8bOrZJxpD8q0wNQTYihYQbjglCEZyxp8i9X/Ls7qj4U+k1hwVej/CRwbYB73+L0A14nXhEtaucQR0BnJ1Dp+Izpn1fX1RF5XlN24zKbZpusQHx0LIA30FV+5ehm2YVAVuBIRjQfFkugKNc7YYt4MoWbRWc1Sd/W7ME4MATxtJhqsdf8qvheTqxN8z/dVwaTe0qjM7R8DYt4Jm5YwIOsMM2+F4iBPdZ2M3wS2OJLCAq2sl6uXIjcy/ro12yeuqB4e+xbcK5MwdoIyp5zeXkW+WLQfDhkc1GRIh2UhwmPHx95o9gq+ToI5v9zpE2W0oedwPyi6m65P/1ZW0sz42Jpmjg/yuRfOeuGW7yPu8L3Gs7680SepVCiG4XmyAg9OFS7qv23PZh3KbZvjSS4A9/bKow73l7cT4KlVNbx5Aofp+6Cw39NV1p69YhQWX4z6X0AwFmyKELCSJitQcasCcFO+IgL35ybW8nxy+c/u43lCTq7wqbKQ7zbfMtIDMULphJaUWjgb1nrSjPiW1ACVKJHn7aSevqyw9fSPXQZL+pDVuQ9v+Kq+4VhSy7jOE+s6duGMnctsq3ISC+f2rqirk8TcdEHjJ9SdjpTdx9uePHgWCdV1jm0ROq8q8npZTS1ozDvxdPRBjqcAdadOZ+CkAGwTrFBtZAG28e0X1we4Hhzvz9L0WeiI/gNB21NONsosqpcPmsPdMIOhzGxPJBpkPYAGCN/xWxmqcqZAxoe2ojs1lWmInyiycaEDVX/9rNB6q39shfA/D/gJqXKFAm8dQYsGAPpgKT5uAlJpyz0ffOHr7zRu7spaJmJtduKdUQ1ROCZOpVjZk99K0fk/OdOsKTay1KGuA==",
+    "expiration": "2026-06-19T18:34:23.000Z",
+    "backend": "GIT_BACKEND_S3"
+  },
+  "name": "minecraft-checklist",
+  "path": "/home/ubuntu/minecraft-checklist",
+  "port": 3000,
+  "secrets": {
+    "BUILT_IN_FORGE_API_KEY": "MYYdEuiFQn4u9kzqUXjygq",
+    "BUILT_IN_FORGE_API_URL": "https://forge.manus.ai",
+    "JWT_SECRET": "SMJwKEA9VbdveettzyXVhJ",
+    "OAUTH_SERVER_URL": "https://api.manus.im",
+    "OWNER_NAME": "Olcha Pascal",
+    "OWNER_OPEN_ID": "c3stb9RogZgrH6iiqZKewS",
+    "VITE_ANALYTICS_ENDPOINT": "https://manus-analytics.com",
+    "VITE_ANALYTICS_WEBSITE_ID": "0979dc6b-8da2-47fb-9c35-37871358c7c0",
+    "VITE_APP_ID": "SRmXACUMB9gavYTJRaMQYb",
+    "VITE_APP_LOGO": "",
+    "VITE_APP_TITLE": "Minecraft Item Checklist",
+    "VITE_FRONTEND_FORGE_API_KEY": "iPutjsSyCXyieKToRjZqsf",
+    "VITE_FRONTEND_FORGE_API_URL": "https://forge.manus.ai",
+    "VITE_OAUTH_PORTAL_URL": "https://manus.im"
+  },
+  "template_id": "web-static",
+  "test_command": "pnpm test"
+}
