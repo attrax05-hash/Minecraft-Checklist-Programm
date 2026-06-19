@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
-import { X, Plus, Search, Download, Trash2, Info } from 'lucide-react';
-import { minecraftItems, searchItems, getItemImageUrl } from '@/lib/minecraftItems';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { X, Plus, Search, Download, Trash2, Info, Upload } from 'lucide-react';
+import { minecraftItems, searchItems, getItemImageUrl, getItemsByCategory, getCategories } from '@/lib/minecraftItems';
 import type { MinecraftItem } from '@/lib/minecraftItems';
 import { getItemDetails } from '@/lib/itemDetails';
 import { toast } from 'sonner';
@@ -30,6 +31,8 @@ export default function Home() {
   const [selectedItem, setSelectedItem] = useState<MinecraftItem | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [infoItem, setInfoItem] = useState<MinecraftItem | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Lade Checkliste aus localStorage beim Start
   useEffect(() => {
@@ -130,6 +133,64 @@ export default function Home() {
     toast.success('Als Text exportiert');
   };
 
+  const handleImportJSON = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const imported = JSON.parse(e.target?.result as string);
+        if (Array.isArray(imported)) {
+          setChecklist(imported);
+          toast.success(`${imported.length} Items importiert`);
+        } else {
+          toast.error('Ungültiges Format');
+        }
+      } catch (error) {
+        toast.error('Fehler beim Importieren');
+      }
+    };
+    reader.readAsText(file);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
+  const handleClearChecklist = () => {
+    if (window.confirm('Möchtest du wirklich alle Items löschen?')) {
+      setChecklist([]);
+      toast.success('Checkliste geleert');
+    }
+  };
+
+  // Tastenkombinationen
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey || e.metaKey) {
+        if (e.key === 'e') {
+          e.preventDefault();
+          handleExportJSON();
+        } else if (e.key === 'i') {
+          e.preventDefault();
+          fileInputRef.current?.click();
+        } else if (e.key === 'f') {
+          e.preventDefault();
+          const searchInput = document.querySelector('input[placeholder="Suche Items..."]') as HTMLInputElement;
+          if (searchInput) searchInput.focus();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  // Filtere Items basierend auf Kategorie
+  const filteredItems = selectedCategory === 'all' 
+    ? minecraftItems 
+    : getItemsByCategory(selectedCategory as any);
+
+  const categories = getCategories();
+
   const completedCount = checklist.filter((item) => item.checked).length;
   const totalCount = checklist.length;
   const progress = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
@@ -167,6 +228,21 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Kategorie-Filter */}
+          <div className="mb-6">
+            <p className="text-[#FFD700] font-bold mb-3">KATEGORIEN:</p>
+            <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
+              <TabsList className="grid grid-cols-3 gap-1 bg-[#1a1a1a] border-2 border-[#4CAF50]">
+                <TabsTrigger value="all" className="text-xs">ALLE</TabsTrigger>
+                {categories.slice(0, 5).map((cat) => (
+                  <TabsTrigger key={cat} value={cat} className="text-xs">
+                    {cat.toUpperCase().slice(0, 4)}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </Tabs>
+          </div>
+
           {/* Beliebte Items */}
           <div className="mb-6">
             <p className="text-[#FFD700] font-bold mb-3">BELIEBTE ITEMS:</p>
@@ -189,10 +265,10 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Suchergebnisse */}
-          {searchQuery && (
+          {/* Suchergebnisse oder Kategorie-Items */}
+          {(searchQuery || selectedCategory !== 'all') && (
             <div className="space-y-2">
-              {searchResults.slice(0, 10).map((item) => (
+              {(searchQuery ? searchResults : filteredItems).slice(0, 10).map((item) => (
                 <button
                   key={item.id}
                   onClick={() => handleSelectItem(item)}
@@ -318,12 +394,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Export Buttons */}
+          {/* Export/Import Buttons */}
           <div className="flex gap-2 mb-6">
             <Button
               onClick={handleExportJSON}
               className="flex-1 bg-[#4CAF50] hover:bg-[#45a049] text-white text-sm"
-              title="Als JSON exportieren"
+              title="Als JSON exportieren (Strg+E)"
             >
               <Download className="h-4 w-4 mr-1" />
               JSON
@@ -336,6 +412,21 @@ export default function Home() {
               <Download className="h-4 w-4 mr-1" />
               Text
             </Button>
+            <Button
+              onClick={() => fileInputRef.current?.click()}
+              className="flex-1 bg-[#FFD700] hover:bg-[#FFC700] text-black text-sm"
+              title="JSON importieren (Strg+I)"
+            >
+              <Upload className="h-4 w-4 mr-1" />
+              Import
+            </Button>
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept=".json"
+              onChange={handleImportJSON}
+              className="hidden"
+            />
           </div>
 
           {/* Checkliste Items */}
@@ -343,6 +434,13 @@ export default function Home() {
             <div className="text-center py-12 border-2 border-dashed border-[#4CAF50] rounded">
               <p className="text-[#b0b0b0]">Keine Items in deiner Liste.</p>
               <p className="text-[#b0b0b0]">Suche nach Items und füge sie hinzu!</p>
+              <Button
+                onClick={() => fileInputRef.current?.click()}
+                className="mt-4 bg-[#FFD700] hover:bg-[#FFC700] text-black"
+              >
+                <Upload className="h-4 w-4 mr-2" />
+                Oder importiere eine Checkliste
+              </Button>
             </div>
           ) : (
             <div className="space-y-2 max-h-96 overflow-y-auto">
@@ -394,6 +492,17 @@ export default function Home() {
                 );
               })}
             </div>
+          )}
+          
+          {/* Löschen Button */}
+          {totalCount > 0 && (
+            <Button
+              onClick={handleClearChecklist}
+              className="w-full mt-4 bg-[#FF6B35] hover:bg-[#FF5722] text-white"
+            >
+              <Trash2 className="h-4 w-4 mr-2" />
+              Alle löschen
+            </Button>
           )}
         </div>
       </div>
