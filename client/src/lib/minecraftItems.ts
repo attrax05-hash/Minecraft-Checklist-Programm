@@ -77,6 +77,35 @@ export const getItemImageUrl = (imageId: string): string => {
   return url || `/manus-storage/${imageId}.png`;
 };
 
+// Levenshtein Distance: Berechnet die Editierdistanz zwischen zwei Strings
+function levenshteinDistance(a: string, b: string): number {
+  const matrix: number[][] = [];
+  
+  for (let i = 0; i <= b.length; i++) {
+    matrix[i] = [i];
+  }
+  
+  for (let j = 0; j <= a.length; j++) {
+    matrix[0][j] = j;
+  }
+  
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      if (b.charAt(i - 1) === a.charAt(j - 1)) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j - 1] + 1,
+          matrix[i][j - 1] + 1,
+          matrix[i - 1][j] + 1
+        );
+      }
+    }
+  }
+  
+  return matrix[b.length][a.length];
+}
+
 // Fuzzy Search: Berechnet die Ähnlichkeit zwischen zwei Strings
 function fuzzyScore(query: string, target: string): number {
   query = query.toLowerCase();
@@ -84,6 +113,14 @@ function fuzzyScore(query: string, target: string): number {
   
   if (target.includes(query)) return 100; // Exakte Übereinstimmung
   
+  // Levenshtein Distance für Rechtschreibfehler
+  const distance = levenshteinDistance(query, target);
+  const maxLength = Math.max(query.length, target.length);
+  const similarity = Math.max(0, 100 - (distance / maxLength) * 100);
+  
+  if (similarity > 60) return similarity; // Mindestens 60% Ähnlichkeit
+  
+  // Fallback: Fuzzy Matching
   let score = 0;
   let queryIdx = 0;
   
