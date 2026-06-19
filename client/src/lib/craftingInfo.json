@@ -1,0 +1,26 @@
+{
+  "stone": {
+    "biome": "\u00dcberall",
+    "height": "\u00dcberall",
+    "crafting": "Stone 2x brennen",
+    "link": "https://minecraft-craftings.com/#google_vignette",
+    "survival": true,
+    "creative": true
+  },
+  "brick": {
+    "biome": "\u00dcberall",
+    "height": "\u00dcberall",
+    "crafting": "Brick 2x brennen",
+    "link": "https://minecraft-craftings.com/#google_vignette",
+    "survival": true,
+    "creative": true
+  },
+  "diamond_sword": {
+    "biome": "\u00dcberall",
+    "height": "\u00dcberall",
+    "crafting": "3x Diamond + 2x Stick",
+    "link": "https://minecraft-craftings.com/#google_vignette",
+    "survival": true,
+    "creative": true
+  }
+}

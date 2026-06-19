@@ -338,9 +338,6 @@ export default function Home() {
                   />
                   <div>
                     <h3 className="text-lg font-bold text-[#4CAF50]">{selectedItem.name}</h3>
-                    {selectedItem.englishName && selectedItem.englishName !== selectedItem.name && (
-                      <p className="text-sm text-[#FFD700]">{selectedItem.englishName}</p>
-                    )}
                     <p className="text-sm text-[#b0b0b0]">{selectedItem.category}</p>
                     {(selectedItem.creativeOnly || selectedItem.survivalOnly) && (
                       <p className="text-xs text-[#FF6B35] mt-1">
@@ -415,6 +412,39 @@ export default function Home() {
                   <Plus className="h-4 w-4 mr-2" />
                   ZUR CHECKLISTE HINZUFÜGEN
                 </Button>
+              </div>
+
+              {/* Crafting Info Box */}
+              <div className="mt-4 p-3 bg-[#2a2a2a] border border-[#FFD700] rounded">
+                <h4 className="text-[#FFD700] font-bold mb-2">📋 CRAFTING INFO</h4>
+                <div className="space-y-2 text-xs text-[#b0b0b0]">
+                  <div>
+                    <p className="text-[#FFD700] font-bold">Biom:</p>
+                    <p>Überall</p>
+                  </div>
+                  <div>
+                    <p className="text-[#FFD700] font-bold">Höhe:</p>
+                    <p>Überall</p>
+                  </div>
+                  <div>
+                    <p className="text-[#FFD700] font-bold">Herstellung:</p>
+                    <p>Siehe Crafting-Link</p>
+                  </div>
+                  <div>
+                    <a
+                      href="https://minecraft-craftings.com/#google_vignette"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#4CAF50] hover:text-[#45a049] underline"
+                    >
+                      🔗 Crafting-Rezept anschauen
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-[#FFD700] font-bold">Verfügbarkeit:</p>
+                    <p>Survival &amp; Creative</p>
+                  </div>
+                </div>
               </div>
             </div>
           )}
@@ -502,9 +532,39 @@ export default function Home() {
                     <p className={`text-sm font-bold ${item.checked ? 'line-through text-[#666]' : 'text-[#4CAF50]'}`}>
                       {item.name}
                     </p>
-                    <p className="text-xs text-[#b0b0b0]">
-                      {item.stacks}x{STACK_SIZE} + {item.items}
-                    </p>
+                    <div className="flex items-center gap-2 mt-1">
+                      <p className="text-xs text-[#b0b0b0]">
+                        {item.stacks > 0 && `${item.stacks} Stacks + `}{item.items}
+                      </p>
+                      <div className="flex items-center gap-1">
+                        <Button
+                          onClick={() => {
+                            const newItems = item.items - 1;
+                            if (newItems < 0) {
+                              setChecklist(checklist.map((i) => i.id === item.id ? { ...i, stacks: Math.max(0, i.stacks - 1), items: STACK_SIZE - 1 } : i));
+                            } else {
+                              setChecklist(checklist.map((i) => i.id === item.id ? { ...i, items: newItems } : i));
+                            }
+                          }}
+                          className="h-5 w-5 p-0 bg-[#4CAF50]/50 hover:bg-[#4CAF50] text-xs"
+                        >
+                          −
+                        </Button>
+                        <Button
+                          onClick={() => {
+                            const newItems = item.items + 1;
+                            if (newItems > STACK_SIZE) {
+                              setChecklist(checklist.map((i) => i.id === item.id ? { ...i, stacks: i.stacks + 1, items: 1 } : i));
+                            } else {
+                              setChecklist(checklist.map((i) => i.id === item.id ? { ...i, items: newItems } : i));
+                            }
+                          }}
+                          className="h-5 w-5 p-0 bg-[#4CAF50]/50 hover:bg-[#4CAF50] text-xs"
+                        >
+                          +
+                        </Button>
+                      </div>
+                    </div>
                   </div>
                   <Button
                     onClick={() => removeItem(item.id)}

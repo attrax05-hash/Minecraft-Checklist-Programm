@@ -7,8 +7,7 @@ import itemMetadata from './itemMetadata.json';
 
 export interface MinecraftItem {
   id: string;
-  name: string; // Deutscher Name
-  englishName?: string; // Englischer Name
+  name: string; // Englischer Name
   category: 'ore' | 'ingot' | 'block' | 'tool' | 'weapon' | 'armor' | 'food' | 'material' | 'decoration' | 'redstone' | 'other';
   imageId: string; // ID für die Bildsuche
   imageUrl?: string; // Direkte URL zum Bild
@@ -51,15 +50,13 @@ const createItemsFromMapping = (): MinecraftItem[] => {
   };
 
   // Erstelle Items aus dem Mapping
-  Object.entries(imageMapping).forEach(([imageId, germanName]) => {
+  Object.entries(imageMapping).forEach(([imageId, englishName]) => {
     const imageUrl = (imageUrlMapping as Record<string, string>)[imageId];
-    const englishName = (englishNamesMapping as Record<string, string>)[imageId];
     const metadata = (itemMetadata as Record<string, any>)[imageId] || {};
     
     items.push({
       id: imageId,
-      name: germanName as string,
-      englishName: englishName,
+      name: englishName as string,
       category: categorizeItem(imageId),
       imageId: imageId,
       imageUrl: imageUrl || `/manus-storage/${imageId}.png`,
@@ -80,14 +77,42 @@ export const getItemImageUrl = (imageId: string): string => {
   return url || `/manus-storage/${imageId}.png`;
 };
 
+// Fuzzy Search: Berechnet die Ähnlichkeit zwischen zwei Strings
+function fuzzyScore(query: string, target: string): number {
+  query = query.toLowerCase();
+  target = target.toLowerCase();
+  
+  if (target.includes(query)) return 100; // Exakte Übereinstimmung
+  
+  let score = 0;
+  let queryIdx = 0;
+  
+  for (let i = 0; i < target.length && queryIdx < query.length; i++) {
+    if (target[i] === query[queryIdx]) {
+      score += 10;
+      queryIdx++;
+    }
+  }
+  
+  return queryIdx === query.length ? score : 0;
+}
+
 export function searchItems(query: string): MinecraftItem[] {
-  const lowerQuery = query.toLowerCase();
-  return minecraftItems.filter(
-    (item) =>
-      item.name.toLowerCase().includes(lowerQuery) ||
-      item.englishName?.toLowerCase().includes(lowerQuery) ||
-      item.id.toLowerCase().includes(lowerQuery)
-  );
+  if (!query.trim()) return minecraftItems;
+  
+  const results = minecraftItems
+    .map((item) => ({
+      item,
+      score: Math.max(
+        fuzzyScore(query, item.name),
+        fuzzyScore(query, item.id)
+      ),
+    }))
+    .filter((result) => result.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .map((result) => result.item);
+  
+  return results;
 }
 
 export function getItemsByCategory(category: MinecraftItem['category']): MinecraftItem[] {
