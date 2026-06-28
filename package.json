@@ -91,4 +91,27 @@
     "typescript": "5.6.3",
     "vite": "^7.1.7",
     "wait-on": "^9.0.10"
+  },
+  "build": {
+    "appId": "com.minecraft-checklist.app",
+    "productName": "Minecraft Checklist",
+    "directories": {
+      "buildResources": "assets",
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
   }
+}
