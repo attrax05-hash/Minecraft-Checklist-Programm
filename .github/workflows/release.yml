@@ -11,30 +11,32 @@ permissions:
 jobs:
   build:
     runs-on: windows-latest
+
     steps:
       - uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22' # Aktualisiert auf die neueste stabile Version
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v3
+        uses: pnpm/action-setup@v4 # Aktualisiert auf v4
         with:
           version: 9
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Build Vite
-        run: pnpm run build
-
-      - name: Build TypeScript (Electron)
-        run: pnpm exec tsc electron/main.ts electron/preload.ts --outDir dist/electron --module esnext --target es2020 --moduleResolution node
+      - name: Build Project
+        run: |
+          pnpm run build
+          pnpm run build:electron
 
       - name: Build with electron-builder
         run: pnpm exec electron-builder --win --publish never
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload artifacts to Release
         uses: softprops/action-gh-release@v2
