@@ -26,8 +26,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Full Build and Package
-        shell: pwsh
+      - name: Build and Package
         run: |
           pnpm run build
           pnpm run build:electron
