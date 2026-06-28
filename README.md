@@ -17,28 +17,18 @@ Eine Desktop-App zum Verwalten deiner Minecraft-Sammlung mit 1886 Items, Craftin
 
 Lade die neueste Version für dein Betriebssystem herunter:
 
-- **Windows**: [minecraft-checklist-setup.exe](https://github.com/YOUR_USERNAME/minecraft-checklist/releases/latest)
-- **macOS**: [minecraft-checklist.dmg](https://github.com/YOUR_USERNAME/minecraft-checklist/releases/latest)
-- **Linux**: [minecraft-checklist.AppImage](https://github.com/YOUR_USERNAME/minecraft-checklist/releases/latest)
+- **Windows**: [Download Setup (EXE)](https://github.com/attrax05-hash/Minecraft-Checklist-Programm/releases/latest/download/Minecraft.Checklist.Setup.1.0.0.exe)
+- **Windows (Portable)**: [Download Portable (EXE)](https://github.com/attrax05-hash/Minecraft-Checklist-Programm/releases/latest/download/Minecraft.Checklist.1.0.0.exe)
+
+> **Hinweis:** Da die App noch keine Signatur hat, könnte Windows "Der Computer wurde durch Windows geschützt" anzeigen. Klicke auf "Weitere Informationen" und dann auf "Trotzdem ausführen".
 
 ## Installation
 
 ### Windows
-1. Lade `minecraft-checklist-setup.exe` herunter
+1. Lade die Setup-Datei herunter
 2. Doppelklick auf die Datei
 3. Folge dem Installer
 4. Fertig! Die App erscheint im Start-Menü
-
-### macOS
-1. Lade `minecraft-checklist.dmg` herunter
-2. Doppelklick auf die Datei
-3. Ziehe die App in den Applications-Ordner
-4. Fertig!
-
-### Linux
-1. Lade `minecraft-checklist.AppImage` herunter
-2. Mache die Datei ausführbar: `chmod +x minecraft-checklist.AppImage`
-3. Doppelklick oder `./minecraft-checklist.AppImage`
 
 ## Verwendung
 
@@ -62,17 +52,8 @@ pnpm install
 # Development Server
 pnpm run dev:electron
 
-# Build für Desktop
-pnpm run dist
-
 # Build für Windows
 pnpm run dist:win
-
-# Build für macOS
-pnpm run dist:mac
-
-# Build für Linux
-pnpm run dist:linux
 ```
 
 ## Lizenz
