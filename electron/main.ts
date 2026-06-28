@@ -1,7 +1,7 @@
 import { app, BrowserWindow, Menu, ipcMain } from 'electron';
 import * as path from 'path';
-const isDev = !app.isPackaged;
 
+const isDev = !app.isPackaged;
 let mainWindow: BrowserWindow | null = null;
 
 function createWindow() {
@@ -20,7 +20,7 @@ function createWindow() {
 
   const startUrl = isDev
     ? 'http://localhost:5173'
-    : `file://${path.join(__dirname, '../index.html')}`;
+    : `file://${path.join(__dirname, '../index.html' )}`;
 
   mainWindow.loadURL(startUrl);
 
@@ -47,7 +47,7 @@ app.on('activate', () => {
   }
 });
 
-// Create application menu
+// App-Menü erstellen
 const template: Electron.MenuItemConstructorOptions[] = [
   {
     label: 'File',
@@ -78,7 +78,7 @@ const template: Electron.MenuItemConstructorOptions[] = [
       {
         label: 'About',
         click: () => {
-          // You can create an about window here
+          // Hier kann ein Info-Fenster erstellt werden
         },
       },
     ],
