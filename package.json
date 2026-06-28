@@ -91,6 +91,7 @@
     "autoprefixer": "^10.4.20",
     "concurrently": "^10.0.3",
     "electron": "^42.4.1",
+    "electron-builder": "^26.15.3",
 
     "esbuild": "^0.25.0",
     "pnpm": "^10.15.1",
