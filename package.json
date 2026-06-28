@@ -11,7 +11,7 @@
     "dev": "vite --host",
     "dev:electron": "concurrently \"pnpm dev\" \"wait-on http://localhost:5173 && electron .\"",
     "build": "vite build",
-    "build:electron": "pnpm build && tsc electron/main.ts electron/preload.ts --outDir dist/electron --module esnext --target es2020 --moduleResolution node",
+    "build:electron": "pnpm run build && pnpm exec tsc electron/main.ts electron/preload.ts --outDir dist/electron --module esnext --target es2020 --moduleResolution node --allowSyntheticDefaultImports true --skipLibCheck true"
     "dist": "pnpm build:electron && electron-builder",
     "dist:win": "pnpm build:electron && electron-builder --win",
     "start": "electron .",
