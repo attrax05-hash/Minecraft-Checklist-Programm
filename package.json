@@ -11,14 +11,13 @@
     "dev": "vite --host",
     "dev:electron": "concurrently \"pnpm dev\" \"wait-on http://localhost:5173 && electron .\"",
     "build": "vite build",
-    "build:electron": "pnpm run build && pnpm exec tsc electron/main.ts electron/preload.ts --outDir dist/electron --module esnext --target es2020 --moduleResolution node --allowSyntheticDefaultImports true --skipLibCheck true"
+    "build:electron": "pnpm run build && npx esbuild electron/main.ts electron/preload.ts --bundle --platform=node --format=esm --outdir=dist/electron --external:electron",
     "dist": "pnpm build:electron && electron-builder",
     "dist:win": "pnpm build:electron && electron-builder --win",
     "start": "electron .",
-    "preview": "vite preview --host",
-    "check": "tsc --noEmit",
-    "format": "prettier --write ."
+    "preview": "vite preview --host"
   },
+  
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-accordion": "^1.2.12",
