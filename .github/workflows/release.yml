@@ -1,50 +1,48 @@
 name: Build and Release
-
 on:
   push:
     tags:
       - 'v*'
-
 permissions:
   contents: write
-
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
       - uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22' # Aktualisiert auf die neueste stabile Version
+          node-version: '22'
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v4 # Aktualisiert auf v4
+        uses: pnpm/action-setup@v4
         with:
           version: 9
 
-      - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
-
-      - name: Build Project
+      - name: Clean and Install
         run: |
-          pnpm run build
-          pnpm run build:electron
+          if (Test-Path dist) { Remove-Item -Recurse -Force dist }
+          if (Test-Path release) { Remove-Item -Recurse -Force release }
+          pnpm install --no-frozen-lockfile
 
-      - name: Build with electron-builder
+      - name: Build Frontend
+        run: pnpm run build
+
+      - name: Build Electron Backend
+        run: pnpm exec tsc electron/main.ts electron/preload.ts --outDir dist/electron --module esnext --target es2020 --moduleResolution node
+
+      - name: Build and Package
         run: pnpm exec electron-builder --win --publish never
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload artifacts to Release
+      - name: Upload to Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
             release/*.exe
             release/*.zip
-          draft: false
-          prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
