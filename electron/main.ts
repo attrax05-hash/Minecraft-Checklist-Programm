@@ -1,5 +1,10 @@
-import { app, BrowserWindow, Menu, ipcMain } from 'electron';
+import { app, BrowserWindow, Menu } from 'electron';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
+
+// Diese Zeilen sind wichtig für moderne Electron-Builds!
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const isDev = !app.isPackaged;
 let mainWindow: BrowserWindow | null = null;
@@ -47,43 +52,10 @@ app.on('activate', () => {
   }
 });
 
-// App-Menü erstellen
+// Menü-Konfiguration (gekürzt für Übersichtlichkeit)
 const template: Electron.MenuItemConstructorOptions[] = [
-  {
-    label: 'File',
-    submenu: [
-      {
-        label: 'Exit',
-        accelerator: 'CmdOrCtrl+Q',
-        click: () => {
-          app.quit();
-        },
-      },
-    ],
-  },
-  {
-    label: 'Edit',
-    submenu: [
-      { label: 'Undo', accelerator: 'CmdOrCtrl+Z', role: 'undo' },
-      { label: 'Redo', accelerator: 'CmdOrCtrl+Y', role: 'redo' },
-      { type: 'separator' },
-      { label: 'Cut', accelerator: 'CmdOrCtrl+X', role: 'cut' },
-      { label: 'Copy', accelerator: 'CmdOrCtrl+C', role: 'copy' },
-      { label: 'Paste', accelerator: 'CmdOrCtrl+V', role: 'paste' },
-    ],
-  },
-  {
-    label: 'Help',
-    submenu: [
-      {
-        label: 'About',
-        click: () => {
-          // Hier kann ein Info-Fenster erstellt werden
-        },
-      },
-    ],
-  },
+  { label: 'File', submenu: [{ label: 'Exit', role: 'quit' }] },
+  { label: 'Edit', role: 'editMenu' }
 ];
-
 const menu = Menu.buildFromTemplate(template);
 Menu.setApplicationMenu(menu);
