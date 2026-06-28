@@ -5,44 +5,44 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-     matrix:
-        os: [windows-latest]
-
+    runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v5
-      
+      - uses: actions/checkout@v4
+
       - name: Setup Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v4
         with:
-          node-version: '24'
-      
+          node-version: '20'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
-      
+        run: pnpm install --no-frozen-lockfile
+
       - name: Build Vite
-        run: npm run build
-      
-      - name: Build TypeScript
-        run: npx tsc electron/main.ts electron/preload.ts --outDir dist/electron --module esnext --target es2020 --moduleResolution node
-      
+        run: pnpm run build
+
+      - name: Build TypeScript (Electron)
+        run: pnpm exec tsc electron/main.ts electron/preload.ts --outDir dist/electron --module esnext --target es2020 --moduleResolution node
+
       - name: Build with electron-builder
-        run: npx electron-builder --publish never
+        run: pnpm exec electron-builder --win --publish never
 
       - name: Upload artifacts to Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            release/**/*.exe
-            release/**/*.dmg
-            release/**/*.AppImage
-            release/**/*.deb
-            release/**/*.zip
+            release/*.exe
+            release/*.zip
           draft: false
           prerelease: false
         env:
-          env: 
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
