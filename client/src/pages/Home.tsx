@@ -188,7 +188,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#1a1a1a] text-white p-6">
       {/* Header */}
       <div className="mb-6">
-        <h1 className="text-4xl font-bold text-[#4CAF50] mb-2">MINECRAFT CHECKLIST</h1>
+        <h1 className="text-4xl font-bold text-[#4CAF50] mb-2">MINECRAFT CHECKLIST v1.0.36</h1>
         <p className="text-[#FFD700] text-sm">
           {completedCount} / {totalCount} erledigt
         </p>
