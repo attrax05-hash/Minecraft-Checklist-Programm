@@ -27,7 +27,11 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Full Build and Package
-        run: pnpm run dist:win
+        shell: bash # Wir erzwingen Bash für konsistente Pfade
+        run: |
+          pnpm run build
+          pnpm run build:electron
+          pnpm exec electron-builder --win --publish never
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
