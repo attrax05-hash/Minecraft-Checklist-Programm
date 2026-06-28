@@ -27,7 +27,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Full Build and Package
-        shell: bash # Wir erzwingen Bash für konsistente Pfade
+        shell: pwsh
         run: |
           pnpm run build
           pnpm run build:electron
